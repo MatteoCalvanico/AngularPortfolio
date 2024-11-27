@@ -2,16 +2,17 @@
     <h3>{{ project.name }}</h3>
     <img [src]="project.image" alt="{{ project.name }}">
     <p>{{ project.description }}</p>
-    <a [href]="project.githubUrl" target="_blank">View Project on GitHub</a>
-    <p>Technologies used:</p>
+    <a [href]="project.githubUrl" target="_blank">
+        <img src="https://imgs.search.brave.com/w5LFW4ei3PC6DUOkw2jcpG1OVDzoYhDqENlECFBWUg8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8y/LzI0L0dpdGh1Yl9s/b2dvX3N2Zy5zdmc" alt="GitHub" class="github-icon">
+    </a>
+    <p class="p-tech">Technologies used:</p>
     <ul>
         <li *ngFor="let tech of project.technologies">
             <img [src]="tech.icon" alt="{{ tech.name }}"  class="tech-icon">
             {{ tech.name }}
         </li>
     </ul>
-    <section *ngIf="project.otherUrls">
-        <p>Other links</p>
+    <section *ngIf="project.otherUrls" class="final-links">
         <ul>
             <li *ngFor="let link of project.otherUrls">
                 <a [href]="link.url" target="_blank">{{link.title}}</a>

@@ -42,7 +42,7 @@ a {
     -webkit-text-fill-color: transparent;
 
     &:hover {
-        color: $white;
+        filter: invert(1);
     }
 }
 
