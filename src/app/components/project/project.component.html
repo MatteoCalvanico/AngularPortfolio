@@ -1,8 +1,15 @@
-<section>
+<section class="component-section">
+    <h3>{{ project.name }}</h3>
     <img [src]="project.image" alt="{{ project.name }}">
-    <h2>{{ project.name }}</h2>
     <p>{{ project.description }}</p>
     <a [href]="project.githubUrl" target="_blank">View Project on GitHub</a>
+    <p>Technologies used:</p>
+    <ul>
+        <li *ngFor="let tech of project.technologies">
+            <img [src]="tech.icon" alt="{{ tech.name }}"  class="tech-icon">
+            {{ tech.name }}
+        </li>
+    </ul>
     <section *ngIf="project.otherUrls">
         <p>Other links</p>
         <ul>
@@ -11,9 +18,4 @@
             </li>
         </ul>
     </section>
-    
-    <p>Technologies used:</p>
-    <ul>
-        <li *ngFor="let tech of project.technologies">{{ tech.name }}</li>
-    </ul>
 </section>

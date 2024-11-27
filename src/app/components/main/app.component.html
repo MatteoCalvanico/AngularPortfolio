@@ -1,3 +1,14 @@
-<h1>My personal Portfolio made by Angular</h1>
-<app-personal-info></app-personal-info>
-<app-project *ngFor="let project of projects" [project]="project"></app-project>
+<main>
+    <header>
+        <h1>Portfolio of Matteo Calvanico</h1>
+        <h2>Software/Game Developer</h2>
+    </header>
+    <h2>Personal Info</h2>
+    <section class="app-section">
+        <app-personal-info></app-personal-info>
+    </section>
+    <h2>Projects</h2>
+    <section class="app-section-project">
+        <app-project *ngFor="let project of projects" [project]="project"></app-project>
+    </section>
+</main>
