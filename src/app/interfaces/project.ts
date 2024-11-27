@@ -6,7 +6,12 @@ export interface Project {
   name: string;
   description: string;
   githubUrl: string;
-  otherUrls?: string[];   // Optional
+  otherUrls?: Url[]; // Optional
   technologies: Skill[];
   image: string;
+}
+
+export interface Url {
+  url: string;
+  title: string; // To show instead of the url
 }

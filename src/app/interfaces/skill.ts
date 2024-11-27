@@ -6,8 +6,12 @@ export interface Skill {
   type: keyof typeof skillCategories; // language, framework, tool
 }
 
-export const skillCategories = {
-  LANGUAGE: 'language',
-  FRAMEWORK: 'framework',
-  TOOL: 'tool',
+export enum skillCategories {
+
+  LANGUAGE = 'LANGUAGE',
+
+  FRAMEWORK = 'FRAMEWORK',
+
+  TOOL = 'TOOL'
+
 };
