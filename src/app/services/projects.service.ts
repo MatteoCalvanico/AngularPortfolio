@@ -30,7 +30,14 @@ export class ProjectsService {
       githubUrl: 'https://github.com/MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault',
       otherUrls: [{url: 'https://play.google.com/store/apps/details?id=it.unibo.gamevault', title: 'Available on Google Play'}],
       technologies: [this.skillService.getSkillByName('Kotlin')!],
-      image: 'https://play-lh.googleusercontent.com/IuFyA-Mq5p46X8Ct-3D6ltn0Nr8W2rvPdqDodIlmmXluBq4tHYFaM2LT3FMIb_K6Fw=w240-h480-rw'
+      image: 'https://github.com/MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault/blob/main/readmeImg/landscape.png?raw=true'
+    },
+    {
+      name: 'Virtual Casinò',
+      description: 'Desktop application in Java simulating some casino games, such as Blackjack, Roulette, and dice.',
+      githubUrl: 'https://github.com/MatteoCalvanico/pss23-Calvanico-Monti-Ghinelli-VirtualCasino',
+      technologies: [this.skillService.getSkillByName('Java')!],
+      image: 'https://github.com/MatteoCalvanico/pss23-Calvanico-Monti-Ghinelli-VirtualCasino/blob/master/src/main/resources/sprite/screenshot/logo.png?raw=true'
     },
   ]
 
