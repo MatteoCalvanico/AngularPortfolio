@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 /* Global styles */
 
 // Variables
 $primary-color: #840520;
 $white: #ffffff;
-$font-stack: 'Roboto', sans-serif;
+$font-stack: 'Lato', sans-serif;
 $dark-background: #121111;
 $gradient-background: linear-gradient(135deg, $primary-color, $dark-background);
 $gradient-background-footer: linear-gradient(275deg, #34040433, $dark-background);
