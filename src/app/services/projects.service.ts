@@ -17,7 +17,7 @@ export class ProjectsService {
       description: '',
       githubUrl: '',
       otherUrls: [],
-      technologies: [],
+      technologies: [this.skillService.getSkillByName('')!],
       image: ''
     },
   */
@@ -29,15 +29,23 @@ export class ProjectsService {
       description: 'Android app for tracking your game collection, with rating and search capabilities',
       githubUrl: 'https://github.com/MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault',
       otherUrls: [{url: 'https://play.google.com/store/apps/details?id=it.unibo.gamevault', title: 'Available on Google Play'}],
-      technologies: [this.skillService.getSkillByName('Kotlin')!],
+      technologies: [this.skillService.getSkillByName('Kotlin')!, this.skillService.getSkillByName('Gradle')!, this.skillService.getSkillByName('Android Studio')!],
       image: 'https://github.com/MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault/blob/main/readmeImg/landscape.png?raw=true'
     },
     {
       name: 'Virtual Casinò',
       description: 'Desktop application in Java simulating some casino games, such as Blackjack, Roulette, and dice.',
       githubUrl: 'https://github.com/MatteoCalvanico/pss23-Calvanico-Monti-Ghinelli-VirtualCasino',
-      technologies: [this.skillService.getSkillByName('Java')!],
+      technologies: [this.skillService.getSkillByName('Java')!, this.skillService.getSkillByName('Gradle')!],
       image: 'https://github.com/MatteoCalvanico/pss23-Calvanico-Monti-Ghinelli-VirtualCasino/blob/master/src/main/resources/sprite/screenshot/logo.png?raw=true'
+    },
+    {
+      name: 'GetEat',
+      description: 'Simple web app for manage restaurants',
+      githubUrl: 'https://github.com/MatteoCalvanico/GetEat',
+      otherUrls: [],
+      technologies: [this.skillService.getSkillByName('Vue.js')!, this.skillService.getSkillByName('HTML5')!, this.skillService.getSkillByName('Saas')!, this.skillService.getSkillByName('Express.js')!, this.skillService.getSkillByName('Bootstrap')!, this.skillService.getSkillByName('TypeScript')!],
+      image: 'https://github.com/MatteoCalvanico/GetEat/blob/main/frontend/public/logo.png?raw=true'
     },
   ]
 
