@@ -1,7 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import anime from 'animejs/lib/anime.es.js';
-//import { RouterOutlet } from '@angular/router';
 
 // Components
 import { PersonalInfoComponent } from '../personal-info/personal-info.component';
@@ -26,11 +25,10 @@ import { SkillsService } from '../../services/skills.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit {
+  experiencesService: ExperiencesService = inject(ExperiencesService);
   projectsService: ProjectsService = inject(ProjectsService);
   skillsService: SkillsService = inject(SkillsService);
-  experiencesService: ExperiencesService = inject(ExperiencesService);
 
   projects: Project[] = [];
   skills: Skill[] = [];
@@ -40,7 +38,7 @@ export class AppComponent {
   constructor() {
     this.projects = this.projectsService.getAllProjects();
     this.skills = this.skillsService.getAllSkills();
-    /*this.experiences = this.experiencesService.getAllExperiences();*/
+    // this.experiences = this.experiencesService.getAllExperiences();
   }
 
   ngOnInit() {
@@ -61,9 +59,35 @@ export class AppComponent {
         { value: wave1 },
       ],
     });
+
+    this.addHoverAnimation('aboutMeButton');
+    this.addHoverAnimation('toggleProjectsButton');
   }
 
   toggleProjects() {
     this.showAllProjects = !this.showAllProjects;
+  }
+
+  addHoverAnimation(buttonId: string) {
+    const button = document.getElementById(buttonId);
+    if (button) {
+      button.addEventListener('mouseenter', () => {
+        anime({
+          targets: `#${buttonId}`,
+          scale: 1.2,
+          duration: 300,
+          easing: 'easeInOutQuad'
+        });
+      });
+
+      button.addEventListener('mouseleave', () => {
+        anime({
+          targets: `#${buttonId}`,
+          scale: 1,
+          duration: 300,
+          easing: 'easeInOutQuad'
+        });
+      });
+    }
   }
 }
