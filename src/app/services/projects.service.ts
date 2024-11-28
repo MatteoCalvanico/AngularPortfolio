@@ -69,8 +69,16 @@ export class ProjectsService {
       githubUrl: 'https://github.com/MatteoCalvanico/EmbeddedProject',
       otherUrls: [{url: 'https://wokwi.com/projects/389703246864781313', title: 'Wokwi Simulation'}],
       technologies: [this.skillService.getSkillByName('Arduino')!, this.skillService.getSkillByName('C')!],
-      image: '../images/EmbeddedProject.png'
+      image: 'https://github.com/MatteoCalvanico/EmbeddedProject/blob/main/ESP32/EmbeddedProject.png?raw=true'
     },
+    {
+      name: 'MultiClass Clssification',
+      description: 'A simple project for multi-class classification of fruits in Python',
+      githubUrl: 'https://github.com/MatteoCalvanico/MultiClass-Classification',
+      otherUrls: [],
+      technologies: [this.skillService.getSkillByName('Python')!, this.skillService.getSkillByName('OpenCV')!, this.skillService.getSkillByName('Pandas')!, this.skillService.getSkillByName('Scikit-Learn')!, this.skillService.getSkillByName('Pytorch')!],
+      image: 'https://storage.googleapis.com/kaggle-datasets-images/5857/8713/df2a86f4b6ecfff7996be179a4e8ebdf/dataset-cover.jpg?t=2017-12-02-08-49-27'
+    }
   ]
 
   getAllProjects(): Project[] {

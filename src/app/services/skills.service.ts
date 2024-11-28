@@ -148,7 +148,7 @@ export class SkillsService {
       type: skillCategories.LANGUAGE,
     },
     {
-      name: 'SciKit-Learn',
+      name: 'Scikit-Learn',
       icon: 'https://camo.githubusercontent.com/dd749c222d8c2520e9595af51d39578b46e22d5190fe5b2f31c01bc32446321e/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f302f30352f5363696b69745f6c6561726e5f6c6f676f5f736d616c6c2e737667',
       type: skillCategories.FRAMEWORK,
     },
