@@ -8,6 +8,7 @@ import { PersonalInfoComponent } from '../personal-info/personal-info.component'
 import { ExperienceComponent } from '../experience/experience.component';
 import { SkillComponent } from '../skill/skill.component';
 import { ProjectComponent } from '../project/project.component';
+import { BashComponent } from '../bash/bash.component';
 
 // Interfaces
 import { Project } from '../../interfaces/project';
@@ -21,7 +22,7 @@ import { SkillsService } from '../../services/skills.service';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, PersonalInfoComponent, ExperienceComponent, SkillComponent, ProjectComponent],
+  imports: [CommonModule, PersonalInfoComponent, BashComponent, ExperienceComponent, SkillComponent, ProjectComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
