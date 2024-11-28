@@ -11,7 +11,7 @@ $scrollbar-thumb-color: rgba(14, 14, 14, 0.5);
 $scrollbar-thumb-radius: 50px;
 $icon-size: 30px;
 $tech-icon-size: 20px;
-$text-size: 70px;
+$text-size: 80px;
 $gap: 10px;
 $margin-top: 40px;
 
@@ -40,8 +40,23 @@ $margin-top: 40px;
     height: $height;
     overflow-y: auto; 
 
+    h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: fit-content;
+        max-width: 100%; 
+        margin: 0 auto;
+    }
+
+    .project-preview{
+        margin-top: 10px;
+    }
+
     .project-desc{
         height: $text-size;
+        margin-top: 10px;
+        margin-bottom: 0%;
         overflow-y: auto; 
         @extend .scrollbar-style;
     }
@@ -49,7 +64,8 @@ $margin-top: 40px;
     .github-icon {
         width: $icon-size;
         height: $icon-size;
-        margin-bottom: 5px;
+        margin-top: 10px;
+        margin-bottom: $margin-bottom
     }
 
     @extend .scrollbar-style;
