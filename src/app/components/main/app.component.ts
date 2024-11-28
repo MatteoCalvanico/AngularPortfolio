@@ -28,6 +28,21 @@ import { SkillsService } from '../../services/skills.service';
 })
 export class AppComponent {
 
+  projectsService: ProjectsService = inject(ProjectsService);
+  skillsService: SkillsService = inject(SkillsService);
+  experiencesService: ExperiencesService = inject(ExperiencesService);
+
+  projects: Project[] = [];
+  skills: Skill[] = [];
+  experiences: Experience[] = [];
+  showAllProjects: boolean = false;
+
+  constructor() {
+    this.projects = this.projectsService.getAllProjects();
+    this.skills = this.skillsService.getAllSkills();
+    /*this.experiences = this.experiencesService.getAllExperiences();*/
+  }
+
   ngOnInit() {
     const wave1 = "M0 108.306L50 114.323C100 120.34 200 132.374 300 168.476C400 204.578 500 264.749 600 246.698C700 228.647 800 132.374 900 108.306C1000 84.2382 1100 132.374 1150 156.442L1200 180.51V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V108.306Z",
           wave2 = "M0 250L50 244.048C100 238.095 200 226.19 300 226.19C400 226.19 500 238.095 600 232.143C700 226.19 800 202.381 900 196.429C1000 190.476 1100 202.381 1150 208.333L1200 214.286V0H1150C1100 0 1000 0 900 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0H0V250Z",
@@ -48,17 +63,7 @@ export class AppComponent {
     });
   }
 
-  projectsService: ProjectsService = inject(ProjectsService);
-  skillsService: SkillsService = inject(SkillsService);
-  experiencesService: ExperiencesService = inject(ExperiencesService);
-
-  projects: Project[] = [];
-  skills: Skill[] = [];
-  experiences: Experience[] = [];
-
-  constructor() {
-    this.projects = this.projectsService.getAllProjects();
-    this.skills = this.skillsService.getAllSkills();
-    /*this.experiences = this.experiencesService.getAllExperiences();*/
+  toggleProjects() {
+    this.showAllProjects = !this.showAllProjects;
   }
 }

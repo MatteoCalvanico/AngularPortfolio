@@ -7,6 +7,9 @@
     </section>
     <h1>Projects</h1>
     <section class="app-section-project">
-        <app-project *ngFor="let project of projects" [project]="project"></app-project>
+        <app-project *ngFor="let project of (showAllProjects ? projects : projects.slice(0, 3))" [project]="project"></app-project>
     </section>
+    <button class="btn btn-primary btn-lg d-block mx-auto mb-4" type="button" aria-expanded="false" (click)="toggleProjects()">
+        {{ showAllProjects ? 'Show Less' : 'Show More' }}
+    </button>
 </main>
