@@ -46,7 +46,7 @@
   }
   
   .typed-wrapper {
-    margin-top: 15px;
+    margin-top: 10px;
   }
   
   .typed-element::before {
@@ -124,5 +124,31 @@
     }
     100% {
       opacity: 1;
+    }
+  }
+  
+  /* Mobile's media query */
+  @media (max-width: 600px) {
+    .bash-container {
+      max-width: 90%; 
+      height: auto; 
+      font-size: 0.8em; 
+      margin: 20px auto;
+    }
+  
+    .bash-header {
+      font-size: 0.6em;
+    }
+  
+    .typed-element::before {
+      font-size: 0.8em;
+    }
+  
+    .typed-element {
+      font-size: 0.8em; 
+    }
+  
+    .typed-cursor {
+      font-size: 0.8em;
     }
   }

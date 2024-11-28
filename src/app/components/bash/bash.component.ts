@@ -10,9 +10,10 @@ export class BashComponent implements OnInit {
 
   ngOnInit() {
     const options = {
-      strings: ["Software Developer", "Game Developer"],
+      strings: ["", "Welcome, I'm a Software Developer", "Welcome, I'm a Game Developer"],
       typeSpeed: 50,
-      backSpeed: 50,
+      backSpeed: 0,
+      smartBackspace: true,
       loop: true
     };
 
