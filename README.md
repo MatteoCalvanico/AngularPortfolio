@@ -21,7 +21,7 @@ You will need:
 
 ## Start up
 
-to download all the dependency, run:
+To download all the dependency, run:
 ```bash
 npm i
 ```
@@ -31,12 +31,11 @@ To start a local development server, run:
 ```bash
 ng serve
 ```
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
 **OR**
 ```bash
 npm start
 ```
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ### Building
 
