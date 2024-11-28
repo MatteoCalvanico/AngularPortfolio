@@ -22,15 +22,12 @@ $text-gradient: $white;
 // Styles
 body {
     height: 100%;
-  }
-  
-  body {
+    margin: 0;
+    padding: 0%;
     position: relative;
     background: $gradient-background;
     color: $white;
     box-sizing: border-box;
-    padding: 1rem;
-  }
   
   .wave-top {
     position: absolute;
@@ -42,6 +39,7 @@ body {
 
   .wave-path {
     fill: $dark-background;
+    }
 }
 
 main {
@@ -81,9 +79,10 @@ img {
 }
 
 footer {
+    position: relative;
     bottom: 0;
-    left: 0;
     width: 100%;
+    margin: 0;
     padding: 10px 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, $dark-background 100%);
     color: $white;

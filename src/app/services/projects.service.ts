@@ -72,7 +72,7 @@ export class ProjectsService {
       image: 'https://github.com/MatteoCalvanico/EmbeddedProject/blob/main/ESP32/EmbeddedProject.png?raw=true'
     },
     {
-      name: 'MultiClass Clssification',
+      name: 'MultiClass Classification',
       description: 'A simple project for multi-class classification of fruits in Python',
       githubUrl: 'https://github.com/MatteoCalvanico/MultiClass-Classification',
       otherUrls: [],
