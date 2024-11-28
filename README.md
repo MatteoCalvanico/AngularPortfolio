@@ -7,9 +7,12 @@ My final portfolio will be different, this is nothing more than a test.
 
 ## Info
 
-This project was generated and use [Angular](https://angular.dev/overview) (version 19).
+This project was generated with **Angular CLI** and use [Angular](https://angular.dev/overview) (version 19).
+
 This project use [Anime.js](https://animejs.com/).
+
 This project use [Typed.js](https://mattboldt.com/demos/typed-js/).
+
 
 You will need:
 - *Node.js* (version v18.20.5)
