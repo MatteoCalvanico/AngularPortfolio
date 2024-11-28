@@ -2,11 +2,10 @@
     <header>
         <app-bash></app-bash>
     </header>
-    <h2>Personal Info</h2>
     <section class="app-section">
         <app-personal-info></app-personal-info>
     </section>
-    <h2>Projects</h2>
+    <h1>Projects</h1>
     <section class="app-section-project">
         <app-project *ngFor="let project of projects" [project]="project"></app-project>
     </section>

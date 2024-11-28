@@ -5,7 +5,7 @@
 // Variables
 $primary-color: #840520;
 $white: #ffffff;
-$font-stack: 'Lato', sans-serif;
+$font-stack: 'Courier New', Courier, monospace;//'Lato', sans-serif;
 $dark-background: #121111;
 $gradient-background: linear-gradient(135deg, $primary-color, $dark-background);
 $gradient-background-footer: linear-gradient(275deg, #34040433, $dark-background);
@@ -21,6 +21,7 @@ $text-gradient: $white;
 
 // Styles
 body {
+    font-family: $font-stack;
     height: 100%;
     margin: 0;
     padding: 0%;
