@@ -2,7 +2,7 @@
 
 The goal of this project is to learn all the aspects and features of Angular and in the meantime to create a well-structured portfolio.
 
-My final portfolio will be different, this is nothing more than a test.
+My final portfolio will be different, this is nothing more than a test to improve my frontend skills.
 
 
 ## Info
