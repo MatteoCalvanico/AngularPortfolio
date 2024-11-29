@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, isDevMode } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import anime from 'animejs/lib/anime.es.js';
 
@@ -57,7 +57,7 @@ export class SkillComponent implements OnInit, AfterViewInit {
       anime({
         targets: '.skills-container',
         translateX: [0, -totalWidth],
-        duration: 30000,
+        duration: isDevMode() ? 1200000 : 30000, // 20 minutes in dev mode, 30 seconds otherwise
         easing: 'linear',
         loop: true,
         update: function(anim) {
