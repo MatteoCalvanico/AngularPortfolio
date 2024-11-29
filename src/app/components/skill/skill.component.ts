@@ -24,6 +24,27 @@ export class SkillComponent implements OnInit, AfterViewInit {
     this.animateSkills();
   }
 
+  /**
+   * Animates the skills container to create a seamless scrolling effect.
+   * 
+   * This function duplicates the content of the skills container to create a continuous loop of skills.
+   * It uses the Anime.js library to animate the horizontal translation of the container.
+   * The animation restarts when the first skill element moves out of view.
+   * 
+   * The function also manages the visibility of skill elements by adding or removing the 'visible' class
+   * based on their position within the viewport.
+   * 
+   * @remarks
+   * - The function assumes that each skill element has a class of 'skill' and the container has a class of 'skills-container'.
+   * - The animation duration is set to 1200000 milliseconds (20 minutes) for a smooth scrolling effect.
+   * - The function initially adds the 'visible' class to all skill elements that are in view.
+   * 
+   * @example
+   * ```typescript
+   * // Call the animateSkills function to start the animation
+   * this.animateSkills();
+   * ```
+   */
   animateSkills(): void {
     const container = document.querySelector('.skills-container') as HTMLElement;
     const skillElements = document.querySelectorAll('.skill');
@@ -59,14 +80,6 @@ export class SkillComponent implements OnInit, AfterViewInit {
               skill.classList.remove('visible');
             }
           });
-        }
-      });
-  
-      // Initially add visible class to all skills that are in view
-      document.querySelectorAll('.skill').forEach(skill => {
-        const rect = (skill as HTMLElement).getBoundingClientRect();
-        if (rect.left >= 0 && rect.right <= window.innerWidth) {
-          skill.classList.add('visible');
         }
       });
     }
