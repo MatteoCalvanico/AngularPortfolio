@@ -19,12 +19,15 @@ main {
     .carousel-inner {
       display: flex;
       overflow: hidden;
-      width: 80%;
+      width: 100%;
+      justify-content: center;
+      gap: 10px; /* Add gap between projects */
     }
 
     app-project {
-      flex: 0 0 33.33%; /* Show 3 projects at a time */
+      flex: 0 0 100%; /* Default to show 1 project at a time */
       margin: 0 10px;
+      max-width: 300px; /* Set a max-width for the projects */
     }
 
     .carousel-button {
@@ -38,6 +41,7 @@ main {
       transform-origin: center; 
       color: $white;
       transition: transform 0.3s ease-in-out;
+      z-index: 1; /* Ensure buttons are above the projects */
 
       &.prev {
         left: 10px;
@@ -48,7 +52,7 @@ main {
       }
 
       &:hover {
-        transform: translateY(-50%) scale(1.2); /* Aggiungi scale(1.2) qui */
+        transform: translateY(-50%) scale(1.2);
       }
     }
   }
@@ -61,6 +65,23 @@ main {
 
     &:hover {
       background: $dark-background;
+    }
+  }
+}
+
+/* Media queries to adjust the number of projects shown based on screen width */
+@media (min-width: 600px) {
+  .carousel-inner {
+    app-project {
+      flex: 0 0 45%; /* Show 2 projects at a time on screens wider than 600px */
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .carousel-inner {
+    app-project {
+      flex: 0 0 30%; /* Show 3 projects at a time on screens wider than 900px */
     }
   }
 }
