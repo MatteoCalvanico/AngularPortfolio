@@ -18,6 +18,7 @@ import { Experience } from '../../interfaces/experience';
 import { ExperiencesService } from '../../services/experiences.service';
 import { ProjectsService } from '../../services/projects.service';
 import { SkillsService } from '../../services/skills.service';
+import { ContactsComponent } from "../contacts/contacts.component";
 
 /**
  * The main component of the Angular application.
@@ -30,7 +31,7 @@ import { SkillsService } from '../../services/skills.service';
  */
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, PersonalInfoComponent, BashComponent, ExperienceComponent, SkillComponent, ProjectComponent],
+  imports: [CommonModule, PersonalInfoComponent, BashComponent, ExperienceComponent, SkillComponent, ProjectComponent, ContactsComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

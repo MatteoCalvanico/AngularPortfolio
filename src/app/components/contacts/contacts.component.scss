@@ -1,0 +1,45 @@
+.contact-links {
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; /* Permette di mandare a capo gli elementi */
+      justify-content: center;
+      align-items: center;
+  
+      li {
+        margin: 10px;
+        text-align: center;
+  
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-decoration: none;
+          color: #000;
+  
+          img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 5px;
+          }
+  
+          &:hover {
+            filter: invert(1);
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 600px) {
+      ul {
+        justify-content: space-around;
+      }
+  
+      li a img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
