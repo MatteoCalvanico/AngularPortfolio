@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { Project } from '../interfaces/project';
 import { SkillsService } from './skills.service';
 
+/**
+ * Service to manage and retrieve project data.
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -81,10 +84,21 @@ export class ProjectsService {
     }
   ]
 
+  /**
+   * Retrieves all projects.
+   *
+   * @returns {Project[]} An array of all projects.
+   */
   getAllProjects(): Project[] {
     return this.allProjects;
   }
 
+  /**
+   * Retrieves a project by its name.
+   * 
+   * @param name - The name of the project to retrieve.
+   * @returns The project with the specified name, or `undefined` if no project is found.
+   */
   getProjectByName(name: string): Project | undefined {
     return this.allProjects.find(project => project.name === name);
   }

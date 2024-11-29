@@ -7,10 +7,10 @@
     </section>
     <h1>Projects</h1>
     <section class="carousel">
-        <button id="prevButton" class="carousel-button prev" (click)="prevProject()">&#10094;</button>
+        <button id="prevButton" class="carousel-button prev" (click)="prevProject()" [disabled]="!canGoPrev()" [class.disabled]="!canGoPrev()">&#10094;</button>
         <div class="carousel-inner">
             <app-project *ngFor="let project of visibleProjects" [project]="project"></app-project>
         </div>
-        <button id="nextButton" class="carousel-button next" (click)="nextProject()">&#10095;</button>
+        <button id="nextButton" class="carousel-button next" (click)="nextProject()" [disabled]="!canGoNext()" [class.disabled]="!canGoNext()">&#10095;</button>
     </section>
 </main>

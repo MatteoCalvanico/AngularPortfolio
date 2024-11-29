@@ -1,6 +1,22 @@
 import { Injectable } from '@angular/core';
 import { Skill, skillCategories } from '../interfaces/skill';
 
+/**
+ * Service to manage skills data.
+ * 
+ * @remarks
+ * This service provides methods to retrieve skills data. The skills data is currently hardcoded
+ * but can be moved to a JSON file for better maintainability.
+ * 
+ * @example
+ * ```typescript
+ * import { SkillsService } from './skills.service';
+ * 
+ * const skillsService = new SkillsService();
+ * const allSkills = skillsService.getAllSkills();
+ * const kotlinSkill = skillsService.getSkillByName('Kotlin');
+ * ```
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -194,10 +210,31 @@ export class SkillsService {
     }
   ]
 
+  /**
+   * Retrieves all skills.
+   * 
+   * @returns An array of all skills.
+   * 
+   * @example
+   * ```typescript
+   * const allSkills = skillsService.getAllSkills();
+   * ```
+   */
   getAllSkills(): Skill[] {
     return this.allSkills;
   }
 
+  /**
+   * Retrieves a skill by its name.
+   * 
+   * @param name - The name of the skill to retrieve.
+   * @returns The skill object if found, otherwise `undefined`.
+   * 
+   * @example
+   * ```typescript
+   * const kotlinSkill = skillsService.getSkillByName('Kotlin');
+   * ```
+   */
   getSkillByName(name: string): Skill | undefined {
     return this.allSkills.find(skill => skill.name === name);
   }

@@ -51,8 +51,13 @@ main {
         right: 10px;
       }
 
-      &:hover {
-        transform: translateY(-50%) scale(1.2);
+      &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        
+        &:hover {
+          transform: translateY(-50%) scale(1) !important;
+        }
       }
     }
   }
