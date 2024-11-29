@@ -7,8 +7,13 @@
 
 .skill {
   display: inline-block;
-  margin: 0 10px;
   will-change: transform;
+  opacity: 0; /* Start with opacity 0 */
+  transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
+}
+
+.skill.visible {
+  opacity: 1; /* Fade in to opacity 1 */
 }
 
 .skill-icon {
