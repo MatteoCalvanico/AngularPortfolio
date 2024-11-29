@@ -83,6 +83,16 @@ main {
   }
 }
 
+@media (max-width: 767px) {
+  .carousel {
+    .carousel-control-prev,
+    .carousel-control-next {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
 @media (min-width: 900px) {
   .carousel-inner {
     app-project {
