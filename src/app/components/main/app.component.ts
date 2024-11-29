@@ -23,7 +23,7 @@ import { SkillsService } from '../../services/skills.service';
   selector: 'app-root',
   imports: [CommonModule, PersonalInfoComponent, BashComponent, ExperienceComponent, SkillComponent, ProjectComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   experiencesService: ExperiencesService = inject(ExperiencesService);
@@ -31,14 +31,18 @@ export class AppComponent implements OnInit {
   skillsService: SkillsService = inject(SkillsService);
 
   projects: Project[] = [];
+  visibleProjects: Project[] = [];
   skills: Skill[] = [];
   experiences: Experience[] = [];
   showAllProjects: boolean = false;
+  currentIndex: number = 0;
+  projectsToShow: number = 3;
 
   constructor() {
     this.projects = this.projectsService.getAllProjects();
     this.skills = this.skillsService.getAllSkills();
     // this.experiences = this.experiencesService.getAllExperiences();
+    this.updateVisibleProjects();
   }
 
   ngOnInit() {
@@ -50,7 +54,7 @@ export class AppComponent implements OnInit {
     anime({
       targets: '.wave-top > path',
       easing: 'linear',
-      duration: 15000, // Slows down the movement
+      duration: 15000,
       loop: true,
       d: [
         { value: [wave1, wave2] },
@@ -62,6 +66,24 @@ export class AppComponent implements OnInit {
 
     this.addHoverAnimation('aboutMeButton');
     this.addHoverAnimation('toggleProjectsButton');
+  }
+
+  updateVisibleProjects() {
+    this.visibleProjects = this.projects.slice(this.currentIndex, this.currentIndex + this.projectsToShow);
+  }
+
+  prevProject() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.updateVisibleProjects();
+    }
+  }
+
+  nextProject() {
+    if (this.currentIndex < this.projects.length - this.projectsToShow) {
+      this.currentIndex++;
+      this.updateVisibleProjects();
+    }
   }
 
   toggleProjects() {
