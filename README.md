@@ -44,3 +44,10 @@ To build the project run:
 ```bash
 ng build
 ```
+**OR**
+
+To build and deploy directly on the GitHub Pages
+
+```bash
+ng deploy --base-href=/AngularPortfolio/
+```
