@@ -1,0 +1,17 @@
+.skills-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.skill {
+  display: inline-block;
+  margin: 0 10px;
+  will-change: transform;
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+}

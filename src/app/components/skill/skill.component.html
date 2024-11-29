@@ -1,1 +1,5 @@
-<p>skill works!</p>
+<div class="skills-container">
+    <div class="skill" *ngFor="let skill of skills">
+      <img [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+    </div>
+  </div>
