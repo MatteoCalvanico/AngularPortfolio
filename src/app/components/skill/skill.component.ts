@@ -57,7 +57,7 @@ export class SkillComponent implements OnInit, AfterViewInit {
       anime({
         targets: '.skills-container',
         translateX: [0, -totalWidth],
-        duration: 1200000,
+        duration: 30000,
         easing: 'linear',
         loop: true,
         update: function(anim) {

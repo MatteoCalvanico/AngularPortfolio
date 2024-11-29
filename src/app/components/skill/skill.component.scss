@@ -3,13 +3,16 @@
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .skill {
   display: inline-block;
-  will-change: transform;
-  opacity: 0; /* Start with opacity 0 */
-  transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
+  will-change: transform, opacity;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  transform: translate3d(0, 0, 0);
 }
 
 .skill.visible {
