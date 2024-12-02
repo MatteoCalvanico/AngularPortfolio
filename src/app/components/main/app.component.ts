@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import anime from 'animejs/lib/anime.es.js';
 
@@ -35,7 +35,7 @@ import { ContactsComponent } from "../contacts/contacts.component";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnChanges {
   /**
    * Service to manage experiences.
    */
@@ -96,6 +96,10 @@ export class AppComponent implements OnInit {
     
     this.updateVisibleProjects();
     window.addEventListener('resize', this.updateProjectsToShow.bind(this));
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.updateVisibleProjects();
   }
 
   /**

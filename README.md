@@ -54,5 +54,4 @@ ng deploy --base-href=/AngularPortfolio/
 
 
 #### Known bugs
-- In the carousel, with mobile view, is impossible to see the first and last project.
 - In the skills loop the new images enter without animation.
