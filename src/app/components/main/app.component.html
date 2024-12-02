@@ -19,7 +19,9 @@
     </section>
     <h1>Experience and education</h1>
     <section>
-        <app-experience></app-experience>
+        <app-experience *ngFor="let exp of eduExperiences" [exp]="exp"></app-experience>
+        <span class="divider"></span>
+        <app-experience *ngFor="let exp of workExperiences" [exp]="exp"></app-experience>
     </section>
     <h1>You want more?...</h1>
     <h2>...then check out my contacts OR download my CV</h2>

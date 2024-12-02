@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Experience } from '../../interfaces/experience';
@@ -17,14 +17,6 @@ import { ExperiencesService } from '../../services/experiences.service';
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })
-export class ExperienceComponent implements OnInit {
-  eduExperiences: Experience[] = [];
-  workExperiences: Experience[] = [];
-
-  constructor(private experiencesService: ExperiencesService) {}
-
-  ngOnInit(): void {
-    this.eduExperiences = this.experiencesService.getAllEduExperiences();
-    this.workExperiences = this.experiencesService.getAllWorkExperiences(); 
-  }
+export class ExperienceComponent{
+  @Input() exp!: Experience;
 }

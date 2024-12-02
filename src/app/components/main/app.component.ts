@@ -69,7 +69,8 @@ export class AppComponent implements OnInit, OnChanges {
   /**
    * List of all experiences.
    */
-  experiences: Experience[] = [];
+  eduExperiences: Experience[] = [];
+  workExperiences: Experience[] = [];
 
   /**
    * Flag to indicate whether to show all projects.
@@ -93,6 +94,8 @@ export class AppComponent implements OnInit, OnChanges {
   constructor() {
     this.projects = this.projectsService.getAllProjects();
     this.skills = this.skillsService.getAllSkills();
+    this.eduExperiences = this.experiencesService.allEduExperiences;
+    this.workExperiences = this.experiencesService.allWorkExperiences;
     
     this.updateVisibleProjects();
     window.addEventListener('resize', this.updateProjectsToShow.bind(this));

@@ -47,7 +47,7 @@ export class ProjectsService {
       description: 'Simple web app for manage restaurants',
       githubUrl: 'https://github.com/MatteoCalvanico/GetEat',
       otherUrls: [],
-      technologies: [this.skillService.getSkillByName('Vue.js')!, this.skillService.getSkillByName('HTML5')!, this.skillService.getSkillByName('Saas')!, this.skillService.getSkillByName('Express.js')!, this.skillService.getSkillByName('Bootstrap')!, this.skillService.getSkillByName('TypeScript')!],
+      technologies: [this.skillService.getSkillByName('Vue.js')!, this.skillService.getSkillByName('Node.js')!, this.skillService.getSkillByName('HTML5')!, this.skillService.getSkillByName('Saas')!, this.skillService.getSkillByName('Express.js')!, this.skillService.getSkillByName('Bootstrap')!, this.skillService.getSkillByName('TypeScript')!],
       image: 'https://github.com/MatteoCalvanico/GetEat/blob/main/frontend/public/logo.png?raw=true'
     },
     {
