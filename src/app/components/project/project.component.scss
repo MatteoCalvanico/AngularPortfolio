@@ -73,6 +73,12 @@ $margin-top: 40px;
         }
     }
 
+    .no-github {
+        margin-top: 10px;
+        height: $icon-size;
+        color: red;
+    }
+
     @extend .scrollbar-style;
     
     ul {

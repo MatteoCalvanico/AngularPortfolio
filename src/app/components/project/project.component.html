@@ -2,9 +2,13 @@
     <h3>{{ project.name }}</h3>
     <img class="project-preview" [src]="project.image" alt="{{ project.name }}">
     <p class="project-desc">{{ project.description }}</p>
-    <a [href]="project.githubUrl" target="_blank">
-        <img src="https://imgs.search.brave.com/w5LFW4ei3PC6DUOkw2jcpG1OVDzoYhDqENlECFBWUg8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8y/LzI0L0dpdGh1Yl9s/b2dvX3N2Zy5zdmc" alt="GitHub" class="github-icon">
-    </a>
+    @if (project.githubUrl != '') {
+        <a [href]="project.githubUrl" target="_blank">
+            <img src="https://imgs.search.brave.com/w5LFW4ei3PC6DUOkw2jcpG1OVDzoYhDqENlECFBWUg8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8y/LzI0L0dpdGh1Yl9s/b2dvX3N2Zy5zdmc" alt="GitHub" class="github-icon">
+        </a>
+    }@else {
+        <p class="no-github">Source code is private</p>
+    }
     <p class="p-tech">Technologies used:</p>
     <ul>
         <li *ngFor="let tech of project.technologies">
