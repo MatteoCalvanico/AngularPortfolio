@@ -36,56 +36,22 @@ import { ContactsComponent } from "../contacts/contacts.component";
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnChanges {
-  /**
-   * Service to manage experiences.
-   */
+  //Services inject.
   experiencesService: ExperiencesService = inject(ExperiencesService);
-
-  /**
-   * Service to manage projects.
-   */
   projectsService: ProjectsService = inject(ProjectsService);
-
-  /**
-   * Service to manage skills.
-   */
   skillsService: SkillsService = inject(SkillsService);
 
-  /**
-   * List of all projects.
-   */
-  projects: Project[] = [];
+  //List of...
+  projects: Project[] = [];           // all projects
+  visibleProjects: Project[] = [];    // visible projects
+  skills: Skill[] = [];               // all skills
+  eduExperiences: Experience[] = [];  // all education experiences
+  workExperiences: Experience[] = []; // all work experiences
 
-  /**
-   * List of currently visible projects.
-   */
-  visibleProjects: Project[] = [];
-
-  /**
-   * List of all skills.
-   */
-  skills: Skill[] = [];
-
-  /**
-   * List of all experiences.
-   */
-  eduExperiences: Experience[] = [];
-  workExperiences: Experience[] = [];
-
-  /**
-   * Flag to indicate whether to show all projects.
-   */
-  showAllProjects: boolean = false;
-
-  /**
-   * Current index of the visible projects.
-   */
-  currentIndex: number = 0;
-
-  /**
-   * Number of projects to show at a time.
-   */
-  projectsToShow: number = 3;
+  // Project utility variables
+  showAllProjects: boolean = false; // flag to show all projects
+  currentIndex: number = 0;         // index of the current project to show
+  projectsToShow: number = 3;       // number of projects to show
 
   /**
    * Constructor to initialize the component.
@@ -106,8 +72,7 @@ export class AppComponent implements OnInit, OnChanges {
   }
 
   /**
-   * Lifecycle hook that is called after data-bound properties of a directive are initialized.
-   * Initializes the wave animation and hover animations for buttons.
+   * Initializes the wave animation, hover animations and project flags.
    */
   ngOnInit() {
     // Wave animation paths
