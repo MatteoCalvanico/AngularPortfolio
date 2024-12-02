@@ -1,0 +1,80 @@
+.experience-card {
+    padding: 16px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divider {
+    margin: 0 20px;
+}
+
+section {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 90%;
+    height: fit-content;
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.title-company {
+    text-align: left;
+}
+
+.dates {
+    text-align: right;
+}
+
+.image {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+.description {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.technologies {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .tech {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 8px;
+
+        img {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 4px;
+        }
+
+        p {
+            margin: 0;
+            text-align: center;
+            font-size: 0.8em;
+        }
+    }
+}

@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { Experience } from '../../interfaces/experience';
+import { ExperiencesService } from '../../services/experiences.service';
 
 /**
  * @component ExperienceComponent
@@ -9,10 +13,18 @@ import { Component } from '@angular/core';
  */
 @Component({
   selector: 'app-experience',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements OnInit {
+  eduExperiences: Experience[] = [];
+  workExperiences: Experience[] = [];
 
+  constructor(private experiencesService: ExperiencesService) {}
+
+  ngOnInit(): void {
+    this.eduExperiences = this.experiencesService.getAllEduExperiences();
+    this.workExperiences = this.experiencesService.getAllWorkExperiences(); 
+  }
 }

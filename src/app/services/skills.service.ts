@@ -238,4 +238,14 @@ export class SkillsService {
   getSkillByName(name: string): Skill | undefined {
     return this.allSkills.find(skill => skill.name === name);
   }
+
+  /**
+   * Retrieves all skills except those specified in the excludedSkills array.
+   *
+   * @param excludedSkills - An array of skill names to be excluded from the result.
+   * @returns An array of Skill objects that do not include the excluded skill names.
+   */
+  getAllSkillsExcept(excludedSkills: string[]): Skill[] {
+    return this.allSkills.filter(skill => !excludedSkills.includes(skill.name));
+  }
 }

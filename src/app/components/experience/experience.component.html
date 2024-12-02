@@ -1,1 +1,55 @@
-<p>experience works!</p>
+<div *ngFor="let exp of eduExperiences" class="experience-card">
+    <section>
+        <div class="header">
+            <div class="title-company">
+                <h3>{{exp.title}}</h3>
+                <h5>at: {{exp.company}}</h5>
+            </div>
+            <div class="dates">
+                <p>{{exp.startDate}} - {{exp.endDate}}</p>
+            </div>
+        </div>
+        <div class="image">
+            <img [src]="exp.image" alt="{{exp.company}}">
+        </div>
+        <div class="description">
+            <p>{{exp.description}}</p>
+        </div>
+        <h5>What I learned:</h5>
+        <div class="technologies">
+            <div *ngFor="let tech of exp.technologies" class="tech">
+                <img [src]="tech.icon" alt="{{tech.name}}">
+                <p>{{tech.name}}</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<span class="divider"></span>
+
+<div *ngFor="let exp of workExperiences" class="experience-card">
+    <section>
+        <div class="header">
+            <div class="title-company">
+                <h3>{{exp.title}}</h3>
+                <h5>at: {{exp.company}}</h5>
+            </div>
+            <div class="dates">
+                <p>{{exp.startDate}} - {{exp.endDate}}</p>
+            </div>
+        </div>
+        <div class="image">
+            <img [src]="exp.image" alt="{{exp.company}}">
+        </div>
+        <div class="description">
+            <p>{{exp.description}}</p>
+        </div>
+        <h5>What I learned:</h5>
+        <div class="technologies">
+            <div *ngFor="let tech of exp.technologies" class="tech">
+                <img [src]="tech.icon" alt="{{tech.name}}">
+                <p>{{tech.name}}</p>
+            </div>
+        </div>
+    </section>
+</div>
