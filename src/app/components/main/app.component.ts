@@ -93,8 +93,9 @@ export class AppComponent implements OnInit {
   constructor() {
     this.projects = this.projectsService.getAllProjects();
     this.skills = this.skillsService.getAllSkills();
-    // this.experiences = this.experiencesService.getAllExperiences();
+    
     this.updateVisibleProjects();
+    window.addEventListener('resize', this.updateProjectsToShow.bind(this));
   }
 
   /**
@@ -124,7 +125,25 @@ export class AppComponent implements OnInit {
 
     // Add hover animations to buttons
     this.addHoverAnimation('aboutMeButton');
-    this.addHoverAnimation('toggleProjectsButton');
+
+    // Update the number of projects to show based on the current window width
+    this.updateProjectsToShow();
+  }
+
+  /**
+   * Updates the number of projects to show based on the current window width.
+   * If the window width is less than 768 pixels, it sets the number of projects to show to 1.
+   * Otherwise, it sets the number of projects to show to 3.
+   * After updating the number of projects to show, it calls the `updateVisibleProjects` method
+   * to refresh the visible projects.
+   */
+  updateProjectsToShow() {
+    if (window.innerWidth < 768) {
+      this.projectsToShow = 1;
+    } else {
+      this.projectsToShow = 3;
+    }
+    this.updateVisibleProjects();
   }
 
   /**
