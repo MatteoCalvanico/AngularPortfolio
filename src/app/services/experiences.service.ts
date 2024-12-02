@@ -47,7 +47,7 @@ export class ExperiencesService {
   allWorkExperiences: Experience[] = [{
     title: 'Internship',
     company: 'Maggioli S.p.A.',
-    location: 'Santarcangelo, Italy',
+    location: 'Santarcangelo di Romagna, Italy',
     startDate: 'November 2024',
     endDate: 'On going',
     description: 'University internship at Maggioli S.p.A, italian company that provides software solutions for public administration. I am working in the development team, where I am learning how to develop software in a professional environmentin both front and back end.',
