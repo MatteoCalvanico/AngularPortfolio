@@ -41,7 +41,7 @@ export class ExperiencesService {
     endDate: '2022',
     description: 'I have completed the high school with a specialization in Computer Science and Telecommunication Systems. I have studied the basics of programming, networking, electronics, and much more.',
     technologies: [this.skillService.getSkillByName('C#')!, this.skillService.getSkillByName('DotNet')!, this.skillService.getSkillByName('HTML5')!, this.skillService.getSkillByName('CSS')!, this.skillService.getSkillByName('JavaScript')!, this.skillService.getSkillByName('MySQL')!],
-    image: 'https://imgs.search.brave.com/N5iBnp7aitDM0eFtsszqZL9hx1XMCcrAoRtUsfg-RBw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aXNwYXNjYWxjb21h/bmRpbmkuaXQvd3At/Y29udGVudC91cGxv/YWRzLzIwMTcvMDcv/bG9nby1ibGFpc2Ut/cGFzY2FsLTMwMHgy/MTIuanBn',
+    image: 'https://raw.githubusercontent.com/MatteoCalvanico/AngularPortfolio/58fe65e2175b295405fb592df3c1cd39613dd2c1/src/app/assets/pascal.png',
   }]
 
   allWorkExperiences: Experience[] = [{
@@ -52,7 +52,7 @@ export class ExperiencesService {
     endDate: 'On going',
     description: 'University internship at Maggioli S.p.A, italian company that provides software solutions for public administration. I am working in the development team, where I am learning how to develop software in a professional environmentin both front and back end.',
     technologies: [this.skillService.getSkillByName('Angular')!, this.skillService.getSkillByName('Java')!],
-    image: 'https://imgs.search.brave.com/qF8Sm_KId7KxZzf4byovsxggo-JNH2UoTP6byl6BWKs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9kL2RlL0xv/Z28tZ3J1cHBvLW1h/Z2dpb2xpLnN2Zy81/MTJweC1Mb2dvLWdy/dXBwby1tYWdnaW9s/aS5zdmcucG5n',
+    image: 'https://raw.githubusercontent.com/MatteoCalvanico/AngularPortfolio/58fe65e2175b295405fb592df3c1cd39613dd2c1/src/app/assets/maggioli.png',
   }]
 
 
