@@ -18,7 +18,8 @@ export class ExperiencesService {
       endDate: '',
       description: '',
       technologies: [],
-      image: ''
+      image: '',
+      website: ''
   \]
   */
 
@@ -32,6 +33,7 @@ export class ExperiencesService {
     description: 'I am currently studying Computer Science at the University of Bologna. I have completed courses on programming (OOP, Mobile, Web, ecc), algorithms & data structures, databases, software engineering, machine learning, IoT, Network Systems and much more.',
     technologies: this.skillService.getAllSkillsExcept(['Godot', 'Angular', 'C++', 'React']),
     image: 'https://www.unibo.it/it/immagini/1_UNIBO_Ateneo_vert_pos.jpg/@@images/cc65c983-07a0-4359-add5-69104bcde471.png',
+    website: 'https://corsi.unibo.it/1cycle/ComputerSystemTechnologies'
   }, 
   {
     title: 'High School Diploma in Computer Science and Telecommunication Systems',
@@ -42,6 +44,7 @@ export class ExperiencesService {
     description: 'I have completed the high school with a specialization in Computer Science and Telecommunication Systems. I have studied the basics of programming, networking, electronics, and much more.',
     technologies: [this.skillService.getSkillByName('C#')!, this.skillService.getSkillByName('DotNet')!, this.skillService.getSkillByName('HTML5')!, this.skillService.getSkillByName('CSS')!, this.skillService.getSkillByName('JavaScript')!, this.skillService.getSkillByName('MySQL')!],
     image: 'https://raw.githubusercontent.com/MatteoCalvanico/AngularPortfolio/58fe65e2175b295405fb592df3c1cd39613dd2c1/src/app/assets/pascal.png',
+    website: 'https://www.ispascalcomandini.it/itt-b-pascal/'
   }]
 
   allWorkExperiences: Experience[] = [{
@@ -53,6 +56,7 @@ export class ExperiencesService {
     description: 'University internship at Maggioli S.p.A, italian company that provides software solutions for public administration. I am working in the development team, where I am learning how to develop software in a professional environmentin both front and back end.',
     technologies: [this.skillService.getSkillByName('Angular')!, this.skillService.getSkillByName('Java')!],
     image: 'https://raw.githubusercontent.com/MatteoCalvanico/AngularPortfolio/58fe65e2175b295405fb592df3c1cd39613dd2c1/src/app/assets/maggioli.png',
+    website: 'https://www.maggioli.com/'
   }]
 
 

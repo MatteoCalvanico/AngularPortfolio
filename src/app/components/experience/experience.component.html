@@ -4,13 +4,16 @@
             <div class="title-company">
                 <h3>{{exp.title}}</h3>
                 <h5>at: {{exp.company}}</h5>
+                <h6>{{exp.location}}</h6>
             </div>
             <div class="dates">
                 <p>{{exp.startDate}} - {{exp.endDate}}</p>
             </div>
         </div>
         <div class="image">
-            <img [src]="exp.image" alt="{{exp.company}}">
+            <a [href]="exp.website" target="_blank">
+                <img [src]="exp.image" alt="{{exp.company}}">
+            </a>
         </div>
         <div class="description">
             <p>{{exp.description}}</p>
@@ -33,13 +36,16 @@
             <div class="title-company">
                 <h3>{{exp.title}}</h3>
                 <h5>at: {{exp.company}}</h5>
+                <h6>{{exp.location}}</h6>
             </div>
             <div class="dates">
                 <p>{{exp.startDate}} - {{exp.endDate}}</p>
             </div>
         </div>
         <div class="image">
-            <img [src]="exp.image" alt="{{exp.company}}">
+            <a [href]="exp.website" target="_blank">
+                <img [src]="exp.image" alt="{{exp.company}}">
+            </a>
         </div>
         <div class="description">
             <p>{{exp.description}}</p>

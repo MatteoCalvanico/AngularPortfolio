@@ -45,4 +45,9 @@ export interface Experience {
    * A URL or path to an image representing the experience or company.
    */
   image: string;
+
+  /**
+   * Company website
+   */
+  website: string;
 }
