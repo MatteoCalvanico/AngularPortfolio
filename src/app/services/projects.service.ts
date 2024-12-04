@@ -68,7 +68,7 @@ export class ProjectsService {
     },
     {
       name: 'EmbeddedProject',
-      description: 'A simple IoT project with ESP32 and a Raspberry Pi',
+      description: 'A simple IoT project with a ESP32 and a web app to manage and check parking lots availability',
       githubUrl: 'https://github.com/MatteoCalvanico/EmbeddedProject',
       otherUrls: [{url: 'https://wokwi.com/projects/389703246864781313', title: 'Wokwi Simulation'}],
       technologies: [this.skillService.getSkillByName('Arduino')!, this.skillService.getSkillByName('C')!],
