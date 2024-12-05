@@ -1,6 +1,7 @@
 import { Component, inject, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import anime from 'animejs/lib/anime.es.js';
+import Hammer from 'hammerjs';
 
 // Components
 import { PersonalInfoComponent } from '../personal-info/personal-info.component';
@@ -19,6 +20,7 @@ import { ExperiencesService } from '../../services/experiences.service';
 import { ProjectsService } from '../../services/projects.service';
 import { SkillsService } from '../../services/skills.service';
 import { ContactsComponent } from "../contacts/contacts.component";
+import { HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
 
 /**
  * The main component of the Angular application.
@@ -34,6 +36,12 @@ import { ContactsComponent } from "../contacts/contacts.component";
   imports: [CommonModule, PersonalInfoComponent, BashComponent, ExperienceComponent, SkillComponent, ProjectComponent, ContactsComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: HammerGestureConfig
+    }
+  ]
 })
 export class AppComponent implements OnInit, OnChanges {
   //Services inject.
@@ -100,6 +108,27 @@ export class AppComponent implements OnInit, OnChanges {
 
     // Update the number of projects to show based on the current window width
     this.updateProjectsToShow();
+  }
+
+  /**
+   * Sets up swipe event listeners on a carousel element using the Hammer.js library.
+   * It listens for 'swipeleft' and 'swiperight' events to navigate to the next or previous project, respectively.
+   */
+  ngAfterViewInit() {
+    const carousel = document.querySelector('.carousel-inner');
+    if (carousel) {
+      const hammer = new Hammer(carousel as HTMLElement);
+      hammer.on('swipeleft', () => {
+        console.log('Swipe left detected');
+        this.nextProject();
+      });
+      hammer.on('swiperight', () => {
+        console.log('Swipe right detected');
+        this.prevProject();
+      });
+    } else {
+      console.error('Carousel element not found');
+    }
   }
 
   /**

@@ -13,6 +13,8 @@ This project use [Anime.js](https://animejs.com/).
 
 This project use [Typed.js](https://mattboldt.com/demos/typed-js/).
 
+This project use [Hammer.js](https://hammerjs.github.io/)
+
 
 You will need:
 - *Node.js* (version v18.20.5)
