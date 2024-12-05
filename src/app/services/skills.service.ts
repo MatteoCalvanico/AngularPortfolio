@@ -205,8 +205,13 @@ export class SkillsService {
     },
     {
       name: 'Angular',
-      icon: 'https://imgs.search.brave.com/xob27gUDY9Zuul7pNh6rPJR4mNzViTUFNP_Q1ycZCno/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvbG9nb3MtYW5k/LWJyYW5kcy81MTIv/MjFfQW5ndWxhcl9s/b2dvX2xvZ29zLTUx/Mi5wbmc',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png',
       type: skillCategories.TOOL,
+    },
+    {
+      name: 'Spring',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/512px-Spring_Boot.svg.png',
+      type: skillCategories.FRAMEWORK,
     }
   ]
 

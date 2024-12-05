@@ -54,7 +54,7 @@ export class ExperiencesService {
     startDate: 'November 2024',
     endDate: 'On going',
     description: 'University internship at Maggioli S.p.A, italian company that provides software solutions for public administration. I am working in the development team, where I am learning how to develop software in a professional environment in both front and back end.',
-    technologies: [this.skillService.getSkillByName('Angular')!, this.skillService.getSkillByName('Java')!],
+    technologies: [this.skillService.getSkillByName('Angular')!, this.skillService.getSkillByName('Java')!, this.skillService.getSkillByName('Spring')!],
     image: 'https://raw.githubusercontent.com/MatteoCalvanico/AngularPortfolio/58fe65e2175b295405fb592df3c1cd39613dd2c1/src/app/assets/maggioli.png',
     website: 'https://www.maggioli.com/'
   }]
