@@ -164,6 +164,11 @@ export class SkillsService {
       type: skillCategories.FRAMEWORK,
     },
     {
+      name: 'Blazor',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blazor.png/600px-Blazor.png',
+      type: skillCategories.FRAMEWORK,
+    },
+    {
       name: 'Saas',
       icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg',
       type: skillCategories.LANGUAGE,
