@@ -84,6 +84,11 @@ export class SkillsService {
       type: skillCategories.LANGUAGE,
     },
     {
+      name: 'DBeaver',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/DBeaver_logo.svg/384px-DBeaver_logo.svg.png',
+      type: 'TOOL'
+    },
+    {
       name: 'DotNet',
       icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg',
       type: skillCategories.FRAMEWORK,
