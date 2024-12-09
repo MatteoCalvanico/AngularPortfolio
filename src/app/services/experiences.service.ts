@@ -31,7 +31,7 @@ export class ExperiencesService {
     startDate: '2022',
     endDate: 'On going',
     description: 'I am currently studying Computer Science at the University of Bologna. I have completed courses on programming (OOP, Mobile, Web, ecc), algorithms & data structures, databases, software engineering, machine learning, IoT, Network Systems and much more.',
-    technologies: this.skillService.getAllSkillsExcept(['Godot', 'Angular', 'C++', 'React', 'Spring']),
+    technologies: this.skillService.getAllSkillsExcept(['Godot', 'Angular', 'C++', 'React', 'Spring', 'DBeaver']),
     image: 'https://www.unibo.it/it/immagini/1_UNIBO_Ateneo_vert_pos.jpg/@@images/cc65c983-07a0-4359-add5-69104bcde471.png',
     website: 'https://corsi.unibo.it/1cycle/ComputerSystemTechnologies'
   }, 
