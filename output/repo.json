@@ -52,7 +52,7 @@
             "CMake",
             "Dockerfile"
         ],
-        "image": null
+        "image": "https://raw.githubusercontent.com/MatteoCalvanico/DoomClone/master/output/12-10-24.png"
     },
     {
         "name": "EmbeddedProject",

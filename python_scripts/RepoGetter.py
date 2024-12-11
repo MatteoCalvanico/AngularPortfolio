@@ -4,6 +4,7 @@
 import base64
 import os
 import re
+from bs4 import BeautifulSoup
 import requests             # Import the requests library to make HTTP requests
 import json                 # Import the json library to parse JSON responses
 from github import Github   # Import the Github API
@@ -32,14 +33,37 @@ def get_repo_image(repo):
     if 'content' in response and response['encoding'] == 'base64':
         readme_content = base64.b64decode(response['content']).decode('utf-8')
         
-        # Use regex to find the first <img> tag and extract the src attribute
-        img_tag = re.search(r'<img[^>]+src="([^">]+)"', readme_content)
-        if img_tag:
-            img_url = img_tag.group(1)
+        # Parse the README content with BeautifulSoup
+        soup = BeautifulSoup(readme_content, 'html.parser')
+        
+        # Find the first <img> tag
+        img_tag = soup.find('img')
+        if img_tag and 'src' in img_tag.attrs:
+            img_url = img_tag['src']
             
             # If the img_url is relative, convert it to an absolute URL
             if not img_url.startswith('http'):
                 return f'https://raw.githubusercontent.com/{repo}/master/{img_url}'
+        
+        # If no <img> tag is found, use regex to find markdown image syntax ![alt text](url)
+        markdown_img = re.search(r'!\[.*?\]\((.*?)\)', readme_content)
+        if markdown_img:
+            img_url = markdown_img.group(1)
+            
+            # If the img_url is relative, convert it to an absolute URL
+            if not img_url.startswith('http'):
+                return f'https://raw.githubusercontent.com/{repo}/master/{img_url}'
+        
+        # If no markdown image is found, use regex to find markdown link syntax [nomeImg](url)
+        markdown_link_img = re.search(r'\[.*?\]\((.*?)\)', readme_content)
+        if markdown_link_img:
+            img_url = markdown_link_img.group(1)
+            
+            # If the img_url is relative, convert it to an absolute URL
+            if not img_url.startswith('http'):
+                return f'https://raw.githubusercontent.com/{repo}/master/{img_url}'
+    
+    return None
 
 # Add Framework and Tool based on used languages
 def add_tech(lang: list):
