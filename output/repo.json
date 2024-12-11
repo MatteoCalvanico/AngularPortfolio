@@ -1,27 +1,29 @@
 [
     {
-        "full_name": "MatteoCalvanico/AngularPortfolio",
+        "full_name": "AngularPortfolio",
         "description": "My personal and simple portfolio created to learn Angular",
         "language": [
             "TypeScript",
             "SCSS",
             "HTML",
-            "Python"
+            "Python",
+            "Bootstrap",
+            "Node.js"
         ],
         "html_url": "https://github.com/MatteoCalvanico/AngularPortfolio",
         "homepage": "https://matteocalvanico.github.io/AngularPortfolio/"
     },
     {
-        "full_name": "MatteoCalvanico/DataAnalytics-Project",
+        "full_name": "DataAnalytics-Project",
         "description": "A set of analyzes on three CSVs using pandas",
         "language": [
-            "Jupyter Notebook"
+            "Python"
         ],
         "html_url": "https://github.com/MatteoCalvanico/DataAnalytics-Project",
         "homepage": ""
     },
     {
-        "full_name": "MatteoCalvanico/Dijkstra-in-Python",
+        "full_name": "Dijkstra-in-Python",
         "description": "Dijkstra's algorithm in Python for \"Algoritmi e strutture dati\"",
         "language": [
             "Python"
@@ -30,7 +32,7 @@
         "homepage": null
     },
     {
-        "full_name": "MatteoCalvanico/DoomClone",
+        "full_name": "DoomClone",
         "description": "A simple C++ game similar to Doom and Wolfenstein 3D",
         "language": [
             "C++",
@@ -41,7 +43,7 @@
         "homepage": ""
     },
     {
-        "full_name": "MatteoCalvanico/EmbeddedProject",
+        "full_name": "EmbeddedProject",
         "description": "A simple IoT project with a ESP32 and a web app to manage and check parking lots availability",
         "language": [
             "C",
@@ -55,66 +57,77 @@
         "homepage": ""
     },
     {
-        "full_name": "MatteoCalvanico/GetEat",
+        "full_name": "GetEat",
         "description": "Simple web app for manage restaurants with Vue.js",
         "language": [
-            "Vue",
             "TypeScript",
             "SCSS",
-            "HTML"
+            "HTML",
+            "Bootstrap",
+            "Node.js",
+            "Express.js",
+            "Vue.js"
         ],
         "html_url": "https://github.com/MatteoCalvanico/GetEat",
         "homepage": ""
     },
     {
-        "full_name": "MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault",
-        "description": "Android app for tracking your game collection, with rating and search capabilities",
-        "language": [
-            "Kotlin"
-        ],
-        "html_url": "https://github.com/MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault",
-        "homepage": "https://play.google.com/store/apps/details?id=it.unibo.gamevault"
-    },
-    {
-        "full_name": "MatteoCalvanico/MultiClass-Classification",
-        "description": "Net and config file to create a ML model for classifying",
-        "language": [
-            "Python"
-        ],
-        "html_url": "https://github.com/MatteoCalvanico/MultiClass-Classification",
-        "homepage": ""
-    },
-    {
-        "full_name": "MatteoCalvanico/ProtoCRPG",
-        "description": "A simple prototype for a CRPG in Godot 4.3",
-        "language": [
-            "GDScript"
-        ],
-        "html_url": "https://github.com/MatteoCalvanico/ProtoCRPG",
-        "homepage": ""
-    },
-    {
-        "full_name": "MatteoCalvanico/pss23-Calvanico-Monti-Ghinelli-VirtualCasino",
-        "description": "A simulation of a Casin\u00f2 in Java",
-        "language": [
-            "Java",
-            "CSS"
-        ],
-        "html_url": "https://github.com/MatteoCalvanico/pss23-Calvanico-Monti-Ghinelli-VirtualCasino",
-        "homepage": ""
-    },
-    {
-        "full_name": "MatteoCalvanico/Uomo-Macchina-Project",
-        "description": "Final project for \"Laboratorio di Interfaccia Uomo-Macchina\"",
+        "full_name": "Mako",
+        "description": "Software to manage shifts in a naval port",
         "language": [
             "JavaScript",
             "CSS",
             "C#",
             "HTML",
             "TypeScript",
-            "SCSS"
+            "SCSS",
+            "Blazor"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/Uomo-Macchina-Project",
+        "html_url": "https://github.com/MatteoCalvanico/Mako",
+        "homepage": ""
+    },
+    {
+        "full_name": "Mobile24-CalvanicoMonti-GameVault",
+        "description": "Android app for tracking your game collection, with rating and search capabilities",
+        "language": [
+            "Kotlin",
+            "Gradle",
+            "Android Studio"
+        ],
+        "html_url": "https://github.com/MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault",
+        "homepage": "https://play.google.com/store/apps/details?id=it.unibo.gamevault"
+    },
+    {
+        "full_name": "MultiClass-Classification",
+        "description": "Net and config file to create a ML model for classifying",
+        "language": [
+            "Python",
+            "Pytorch",
+            "Pandas",
+            "OpenCV",
+            "Scikit-Learn"
+        ],
+        "html_url": "https://github.com/MatteoCalvanico/MultiClass-Classification",
+        "homepage": ""
+    },
+    {
+        "full_name": "ProtoCRPG",
+        "description": "A simple prototype for a CRPG in Godot 4.3",
+        "language": [
+            "Godot"
+        ],
+        "html_url": "https://github.com/MatteoCalvanico/ProtoCRPG",
+        "homepage": ""
+    },
+    {
+        "full_name": "pss23-Calvanico-Monti-Ghinelli-VirtualCasino",
+        "description": "A simulation of a Casin\u00f2 in Java",
+        "language": [
+            "Java",
+            "CSS",
+            "Gradle"
+        ],
+        "html_url": "https://github.com/MatteoCalvanico/pss23-Calvanico-Monti-Ghinelli-VirtualCasino",
         "homepage": ""
     }
 ]

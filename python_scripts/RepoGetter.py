@@ -44,10 +44,10 @@ def add_tech(lang: list):
         lang.append("Scikit-Learn")
     
     # If a project use HTML/SCSS then use Bootstrap and Node...if use Vue but not C# then use Express...if use Java then use Sprint
-    if "HTML" in lang and "SCSS" in lang:
+    if ("HTML" in lang and "SCSS" in lang) and "C#" not in lang:
         lang.append("Bootstrap")
         lang.append("Node.js")
-        if "Vue" in lang and "C#" not in lang:
+        if "Vue" in lang:
             lang.append("Express.js")
         if "Java" in lang:
             lang.append("Spring")
@@ -111,7 +111,7 @@ if __name__ == '__main__':
             language = list(repo.get_languages().keys()) # Get all the languages used in the repository
             language = add_tech(language)
             repo_info = {
-                "full_name": repo.full_name,
+                "full_name": repo.full_name.replace("MatteoCalvanico/", ""),
                 "description": repo.description,
                 "language": language,
                 "html_url": repo.html_url,
