@@ -22,6 +22,49 @@ def get_user_repos(username):
     # response = requests.get(url).json()
     # return response
 
+# Add Framework and Tool based on used languages
+def add_tech(lang: list):
+
+    # If a project use GDScript then use Godot Engine
+    if "GDScript" in lang:
+        lang.append("Godot")
+        lang.remove("GDScript")
+    
+    # If a project use Java/Kotlin then use Gradle...if use only Kotlin then use Android Studio
+    if ("Java" in lang or "Kotlin" in lang) and "JavaScript" not in lang:
+        lang.append("Gradle")
+    if "Kotlin" in lang:
+        lang.append("Android Studio")
+    
+    # If a project use Python/Notebook then use Pytorch, Pandas, OpenCV, Scikit-Learn
+    if "Python" in lang and "Jupyter Notebook" in lang:
+        lang.append("Pytorch")
+        lang.append("Pandas")
+        lang.append("OpenCV")
+        lang.append("Scikit-Learn")
+    
+    # If a project use HTML/SCSS then use Bootstrap
+    if "HTML" in lang and "SCSS" in lang:
+        lang.append("Bootstrap")
+    
+    # If a project use JavaScript/C# then use Blazor
+    if "C#" in lang and ("JavaScript" in lang or "TypeScript" in lang):
+        lang.append("Blazor")
+
+
+    # Rename some tech from GitHub Name to Portfolio Name
+    if "Vue" in lang:
+        lang.remove("Vue")
+        lang.append("Vue.js")
+    
+    if "Jupyter Notebook" in lang:
+        lang.remove("Jupyter Notebook")
+        if "Python" not in lang:
+            lang.append("Python")
+
+
+    return lang
+
 
 
 if __name__ == '__main__':
@@ -61,6 +104,7 @@ if __name__ == '__main__':
     for repo in repos:
         if repo.full_name in repo_names: # Take only what I want
             language = list(repo.get_languages().keys()) # Get all the languages used in the repository
+            language = add_tech(language)
             repo_info = {
                 "full_name": repo.full_name,
                 "description": repo.description,
