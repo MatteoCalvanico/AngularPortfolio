@@ -250,8 +250,8 @@ export class SkillsService {
    * const kotlinSkill = skillsService.getSkillByName('Kotlin');
    * ```
    */
-  getSkillByName(name: string): Skill | undefined {
-    return this.allSkills.find(skill => skill.name === name);
+  getSkillByName(name: string): Skill | null {
+    return this.allSkills.find(skill => skill.name === name) || null;
   }
 
   /**

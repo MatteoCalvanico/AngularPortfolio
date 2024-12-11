@@ -56,7 +56,7 @@
     },
     {
         "full_name": "MatteoCalvanico/GetEat",
-        "description": "Simple web app for manage restaurants",
+        "description": "Simple web app for manage restaurants with Vue.js",
         "language": [
             "Vue",
             "TypeScript",
@@ -68,12 +68,12 @@
     },
     {
         "full_name": "MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault",
-        "description": "Final project for \"Laboratorio di Programmazione di Sistemi Mobili\" | App to track and rate your game collection",
+        "description": "Android app for tracking your game collection, with rating and search capabilities",
         "language": [
             "Kotlin"
         ],
         "html_url": "https://github.com/MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault",
-        "homepage": ""
+        "homepage": "https://play.google.com/store/apps/details?id=it.unibo.gamevault"
     },
     {
         "full_name": "MatteoCalvanico/MultiClass-Classification",

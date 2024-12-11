@@ -12,8 +12,10 @@
     <p class="p-tech">Technologies used:</p>
     <ul>
         <li *ngFor="let tech of project.technologies">
-            <img [src]="tech.icon" alt="{{ tech.name }}"  class="tech-icon">
-            <span class="tech-name">{{ tech.name }}</span>
+            <ng-container *ngIf="tech">
+                <img *ngIf="tech.icon" [src]="tech.icon" alt="{{ tech.name }}" class="tech-icon">
+                <span class="tech-name">{{ tech.name }}</span>
+            </ng-container>
         </li>
     </ul>
     <section *ngIf="project.otherUrls" class="final-links">
