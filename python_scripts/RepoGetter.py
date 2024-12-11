@@ -43,9 +43,14 @@ def add_tech(lang: list):
         lang.append("OpenCV")
         lang.append("Scikit-Learn")
     
-    # If a project use HTML/SCSS then use Bootstrap
+    # If a project use HTML/SCSS then use Bootstrap and Node...if use Vue but not C# then use Express...if use Java then use Sprint
     if "HTML" in lang and "SCSS" in lang:
         lang.append("Bootstrap")
+        lang.append("Node.js")
+        if "Vue" in lang and "C#" not in lang:
+            lang.append("Express.js")
+        if "Java" in lang:
+            lang.append("Spring")
     
     # If a project use JavaScript/C# then use Blazor
     if "C#" in lang and ("JavaScript" in lang or "TypeScript" in lang):
