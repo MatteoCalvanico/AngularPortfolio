@@ -111,11 +111,12 @@ if __name__ == '__main__':
             language = list(repo.get_languages().keys()) # Get all the languages used in the repository
             language = add_tech(language)
             repo_info = {
-                "full_name": repo.full_name.replace("MatteoCalvanico/", ""),
+                "name": repo.full_name.replace("MatteoCalvanico/", ""),               
                 "description": repo.description,
-                "language": language,
-                "html_url": repo.html_url,
-                "homepage": repo.homepage
+                "githubUrl": repo.html_url,
+                "otherUrls": [repo.homepage],
+                "technologies": language,
+                "image": '' #TODO
             }
             repo_list.append(repo_info)
     
