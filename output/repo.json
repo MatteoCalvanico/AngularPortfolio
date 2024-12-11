@@ -1,8 +1,12 @@
 [
     {
-        "full_name": "AngularPortfolio",
+        "name": "AngularPortfolio",
         "description": "My personal and simple portfolio created to learn Angular",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/AngularPortfolio",
+        "otherUrls": [
+            "https://matteocalvanico.github.io/AngularPortfolio/"
+        ],
+        "technologies": [
             "TypeScript",
             "SCSS",
             "HTML",
@@ -10,42 +14,54 @@
             "Bootstrap",
             "Node.js"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/AngularPortfolio",
-        "homepage": "https://matteocalvanico.github.io/AngularPortfolio/"
+        "image": null
     },
     {
-        "full_name": "DataAnalytics-Project",
+        "name": "DataAnalytics-Project",
         "description": "A set of analyzes on three CSVs using pandas",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/DataAnalytics-Project",
+        "otherUrls": [
+            ""
+        ],
+        "technologies": [
             "Python"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/DataAnalytics-Project",
-        "homepage": ""
+        "image": null
     },
     {
-        "full_name": "Dijkstra-in-Python",
+        "name": "Dijkstra-in-Python",
         "description": "Dijkstra's algorithm in Python for \"Algoritmi e strutture dati\"",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/Dijkstra-in-Python",
+        "otherUrls": [
+            null
+        ],
+        "technologies": [
             "Python"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/Dijkstra-in-Python",
-        "homepage": null
+        "image": null
     },
     {
-        "full_name": "DoomClone",
+        "name": "DoomClone",
         "description": "A simple C++ game similar to Doom and Wolfenstein 3D",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/DoomClone",
+        "otherUrls": [
+            ""
+        ],
+        "technologies": [
             "C++",
             "CMake",
             "Dockerfile"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/DoomClone",
-        "homepage": ""
+        "image": null
     },
     {
-        "full_name": "EmbeddedProject",
+        "name": "EmbeddedProject",
         "description": "A simple IoT project with a ESP32 and a web app to manage and check parking lots availability",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/EmbeddedProject",
+        "otherUrls": [
+            ""
+        ],
+        "technologies": [
             "C",
             "C++",
             "JavaScript",
@@ -53,13 +69,16 @@
             "CSS",
             "Shell"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/EmbeddedProject",
-        "homepage": ""
+        "image": null
     },
     {
-        "full_name": "GetEat",
+        "name": "GetEat",
         "description": "Simple web app for manage restaurants with Vue.js",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/GetEat",
+        "otherUrls": [
+            ""
+        ],
+        "technologies": [
             "TypeScript",
             "SCSS",
             "HTML",
@@ -68,13 +87,16 @@
             "Express.js",
             "Vue.js"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/GetEat",
-        "homepage": ""
+        "image": null
     },
     {
-        "full_name": "Mako",
+        "name": "Mako",
         "description": "Software to manage shifts in a naval port",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/Mako",
+        "otherUrls": [
+            ""
+        ],
+        "technologies": [
             "JavaScript",
             "CSS",
             "C#",
@@ -83,51 +105,62 @@
             "SCSS",
             "Blazor"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/Mako",
-        "homepage": ""
+        "image": null
     },
     {
-        "full_name": "Mobile24-CalvanicoMonti-GameVault",
+        "name": "Mobile24-CalvanicoMonti-GameVault",
         "description": "Android app for tracking your game collection, with rating and search capabilities",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault",
+        "otherUrls": [
+            "https://play.google.com/store/apps/details?id=it.unibo.gamevault"
+        ],
+        "technologies": [
             "Kotlin",
             "Gradle",
             "Android Studio"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault",
-        "homepage": "https://play.google.com/store/apps/details?id=it.unibo.gamevault"
+        "image": "https://raw.githubusercontent.com/MatteoCalvanico/Mobile24-CalvanicoMonti-GameVault/master/./readmeImg/landscape.png"
     },
     {
-        "full_name": "MultiClass-Classification",
+        "name": "MultiClass-Classification",
         "description": "Net and config file to create a ML model for classifying",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/MultiClass-Classification",
+        "otherUrls": [
+            ""
+        ],
+        "technologies": [
             "Python",
             "Pytorch",
             "Pandas",
             "OpenCV",
             "Scikit-Learn"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/MultiClass-Classification",
-        "homepage": ""
+        "image": null
     },
     {
-        "full_name": "ProtoCRPG",
+        "name": "ProtoCRPG",
         "description": "A simple prototype for a CRPG in Godot 4.3",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/ProtoCRPG",
+        "otherUrls": [
+            ""
+        ],
+        "technologies": [
             "Godot"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/ProtoCRPG",
-        "homepage": ""
+        "image": null
     },
     {
-        "full_name": "pss23-Calvanico-Monti-Ghinelli-VirtualCasino",
+        "name": "pss23-Calvanico-Monti-Ghinelli-VirtualCasino",
         "description": "A simulation of a Casin\u00f2 in Java",
-        "language": [
+        "githubUrl": "https://github.com/MatteoCalvanico/pss23-Calvanico-Monti-Ghinelli-VirtualCasino",
+        "otherUrls": [
+            ""
+        ],
+        "technologies": [
             "Java",
             "CSS",
             "Gradle"
         ],
-        "html_url": "https://github.com/MatteoCalvanico/pss23-Calvanico-Monti-Ghinelli-VirtualCasino",
-        "homepage": ""
+        "image": "https://raw.githubusercontent.com/MatteoCalvanico/pss23-Calvanico-Monti-Ghinelli-VirtualCasino/master/./src/main/resources/sprite/screenshot/logo.png"
     }
 ]

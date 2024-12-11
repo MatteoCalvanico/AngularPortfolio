@@ -1,7 +1,9 @@
 ## This script gets the repositories of a GitHub user and saves them in a JSON file.
 #  First experiment for automate the process of updating the projects section of my portfolio.
 
+import base64
 import os
+import re
 import requests             # Import the requests library to make HTTP requests
 import json                 # Import the json library to parse JSON responses
 from github import Github   # Import the Github API
@@ -21,6 +23,23 @@ def get_user_repos(username):
     # url = API_URL + '/users/' + username + '/repos'
     # response = requests.get(url).json()
     # return response
+
+# Get repo image URL from README.md
+def get_repo_image(repo):
+    url = f'{API_URL}/repos/{repo}/readme'
+    response = requests.get(url).json()
+    
+    if 'content' in response and response['encoding'] == 'base64':
+        readme_content = base64.b64decode(response['content']).decode('utf-8')
+        
+        # Use regex to find the first <img> tag and extract the src attribute
+        img_tag = re.search(r'<img[^>]+src="([^">]+)"', readme_content)
+        if img_tag:
+            img_url = img_tag.group(1)
+            
+            # If the img_url is relative, convert it to an absolute URL
+            if not img_url.startswith('http'):
+                return f'https://raw.githubusercontent.com/{repo}/master/{img_url}'
 
 # Add Framework and Tool based on used languages
 def add_tech(lang: list):
@@ -110,13 +129,14 @@ if __name__ == '__main__':
         if repo.full_name in repo_names: # Take only what I want
             language = list(repo.get_languages().keys()) # Get all the languages used in the repository
             language = add_tech(language)
+            image = get_repo_image(repo.full_name)
             repo_info = {
                 "name": repo.full_name.replace("MatteoCalvanico/", ""),               
                 "description": repo.description,
                 "githubUrl": repo.html_url,
                 "otherUrls": [repo.homepage],
                 "technologies": language,
-                "image": '' #TODO
+                "image": image
             }
             repo_list.append(repo_info)
     
