@@ -9,8 +9,8 @@
         "technologies": [
             "TypeScript",
             "SCSS",
-            "HTML",
             "Python",
+            "HTML",
             "Bootstrap",
             "Node.js"
         ],
@@ -87,7 +87,7 @@
             "Express.js",
             "Vue.js"
         ],
-        "image": null
+        "image": "https://raw.githubusercontent.com/MatteoCalvanico/GetEat/master/./frontend/public/logo.png"
     },
     {
         "name": "Mako",
