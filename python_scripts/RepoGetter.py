@@ -97,7 +97,7 @@ def add_tech(lang: list):
     
     # If a project use JavaScript/C# then use Blazor
     if "C#" in lang and ("JavaScript" in lang or "TypeScript" in lang):
-        lang.append("Blazor")
+        lang.append("DotNet")
 
 
     # Rename some tech from GitHub Name to Portfolio Name
