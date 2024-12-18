@@ -95,7 +95,7 @@ def add_tech(lang: list):
         if "Java" in lang:
             lang.append("Spring")
     
-    # If a project use JavaScript/C# then use Blazor
+    # If a project use JavaScript/C# then use .NET
     if "C#" in lang and ("JavaScript" in lang or "TypeScript" in lang):
         lang.append("DotNet")
 
