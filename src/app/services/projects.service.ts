@@ -47,7 +47,7 @@ export class ProjectsService {
       description: 'Simple web app for manage restaurants',
       githubUrl: 'https://github.com/MatteoCalvanico/GetEat',
       otherUrls: [],
-      technologies: [this.skillService.getSkillByName('Vue.js')!, this.skillService.getSkillByName('Node.js')!, this.skillService.getSkillByName('HTML5')!, this.skillService.getSkillByName('Saas')!, this.skillService.getSkillByName('Express.js')!, this.skillService.getSkillByName('Bootstrap')!, this.skillService.getSkillByName('TypeScript')!],
+      technologies: [this.skillService.getSkillByName('Vue.js')!, this.skillService.getSkillByName('Node.js')!, this.skillService.getSkillByName('HTML5')!, this.skillService.getSkillByName('Sass')!, this.skillService.getSkillByName('Express.js')!, this.skillService.getSkillByName('Bootstrap')!, this.skillService.getSkillByName('TypeScript')!],
       image: 'https://github.com/MatteoCalvanico/GetEat/blob/main/frontend/public/logo.png?raw=true'
     },
     {
@@ -81,6 +81,14 @@ export class ProjectsService {
       otherUrls: [],
       technologies: [this.skillService.getSkillByName('Python')!, this.skillService.getSkillByName('OpenCV')!, this.skillService.getSkillByName('Pandas')!, this.skillService.getSkillByName('Scikit-Learn')!, this.skillService.getSkillByName('Pytorch')!],
       image: 'https://storage.googleapis.com/kaggle-datasets-images/5857/8713/df2a86f4b6ecfff7996be179a4e8ebdf/dataset-cover.jpg?t=2017-12-02-08-49-27'
+    },
+    {
+      name: 'Mako',
+      description: 'Web app to manage shifts in a naval port',
+      githubUrl: 'https://github.com/MatteoCalvanico/Mako',
+      otherUrls: [],
+      technologies: [this.skillService.getSkillByName('C#')!, this.skillService.getSkillByName('DotNet')!, this.skillService.getSkillByName('HTML5')!, this.skillService.getSkillByName('Sass')!, this.skillService.getSkillByName('Bootstrap')!, this.skillService.getSkillByName('TypeScript')!],
+      image: 'https://github.com/MatteoCalvanico/Mako/blob/main/Mako/Mako.Web/wwwroot/images/logo_color_scritta.png?raw=true'
     }
   ]
 

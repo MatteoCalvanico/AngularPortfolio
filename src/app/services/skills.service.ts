@@ -169,7 +169,7 @@ export class SkillsService {
       type: skillCategories.FRAMEWORK,
     },
     {
-      name: 'Saas',
+      name: 'Sass',
       icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg',
       type: skillCategories.LANGUAGE,
     },
