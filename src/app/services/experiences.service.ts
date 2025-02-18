@@ -52,8 +52,8 @@ export class ExperiencesService {
     company: 'Maggioli S.p.A.',
     location: 'Santarcangelo di Romagna, Italy',
     startDate: 'November 2024',
-    endDate: 'On going',
-    description: 'University internship at Maggioli S.p.A, italian company that provides software solutions for public administration. \nI am working in the development team, where I am learning how to develop software in a professional environment in both front and back end. \nThis experience helped me navigate a consolidated and large code base and working with a large team (even remotely).',
+    endDate: 'March 2025',
+    description: 'University internship at Maggioli S.p.A, italian company that provides software solutions for public administration. \nI worked in the development team, where I learned how to develop software in a professional environment in both front and back end. \nThis experience helped me navigate a consolidated and large code base and working with a large team (even remotely).',
     technologies: [this.skillService.getSkillByName('Angular')!, this.skillService.getSkillByName('Java')!, this.skillService.getSkillByName('Spring')!, this.skillService.getSkillByName('DBeaver')!],
     image: 'https://raw.githubusercontent.com/MatteoCalvanico/AngularPortfolio/58fe65e2175b295405fb592df3c1cd39613dd2c1/src/app/assets/maggioli.png',
     website: 'https://www.maggioli.com/'
