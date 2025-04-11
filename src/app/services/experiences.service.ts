@@ -31,7 +31,7 @@ export class ExperiencesService {
     startDate: '2022',
     endDate: 'On going',
     description: 'I am currently studying Computer Science at the University of Bologna. I have completed courses on programming (OOP, Mobile, Web, ecc), algorithms & data structures, databases, software engineering, machine learning, IoT, Network Systems and much more.',
-    technologies: this.skillService.getAllSkillsExcept(['Godot', 'Angular', 'C++', 'React', 'Spring', 'DBeaver']),
+    technologies: this.skillService.getAllSkillsExcept(['Godot', 'Angular', 'C++', 'React', 'Spring', 'DBeaver', 'Kong', 'Fastify', 'Mongoose', 'Zod']),
     image: 'https://www.unibo.it/it/immagini/1_UNIBO_Ateneo_vert_pos.jpg/@@images/cc65c983-07a0-4359-add5-69104bcde471.png',
     website: 'https://corsi.unibo.it/1cycle/ComputerSystemTechnologies'
   }, 
@@ -57,6 +57,16 @@ export class ExperiencesService {
     technologies: [this.skillService.getSkillByName('Angular')!, this.skillService.getSkillByName('Java')!, this.skillService.getSkillByName('Spring')!, this.skillService.getSkillByName('DBeaver')!],
     image: 'https://raw.githubusercontent.com/MatteoCalvanico/AngularPortfolio/58fe65e2175b295405fb592df3c1cd39613dd2c1/src/app/assets/maggioli.png',
     website: 'https://www.maggioli.com/'
+  },{
+    title: 'Internship',
+    company: 'DMA',
+    location: 'Cesena, Italy',
+    startDate: 'April 2024',
+    endDate: 'On going',
+    description: 'University internship at DMA, a customer experience company for B2B that helps companies grow their business by improving customer management, making processes more efficient and optimizing internal collaboration.',
+    technologies: [this.skillService.getSkillByName('React')!, this.skillService.getSkillByName('Kong')!, this.skillService.getSkillByName('Mongoose')!, this.skillService.getSkillByName('Fastify')!, this.skillService.getSkillByName('Zod')!, this.skillService.getSkillByName('TypeScript')!, this.skillService.getSkillByName('Node.js')!, this.skillService.getSkillByName('Docker')!, ],
+    image: 'https://www.dma.it/hubfs/Sito%20DMA/DMA_Logo.svg',
+    website: 'https://www.dma.it/'
   }]
 
 

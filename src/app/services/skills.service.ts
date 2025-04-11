@@ -222,6 +222,26 @@ export class SkillsService {
       name: 'Spring',
       icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/512px-Spring_Boot.svg.png',
       type: skillCategories.FRAMEWORK,
+    },
+    {
+      name: 'Mongoose',
+      icon: 'https://www.vhv.rs/dpng/d/274-2749343_mongoose-js-logo-hd-png-download.png',
+      type: skillCategories.FRAMEWORK,
+    },
+    {
+      name: 'Fastify',
+      icon: 'https://github.com/fastify/graphics/raw/HEAD/fastify-landscape-outlined.svg',
+      type: skillCategories.FRAMEWORK,
+    },
+    {
+      name: 'Zod',
+      icon: 'https://zod.dev/logo.svg',
+      type: skillCategories.FRAMEWORK,
+    },
+    {
+      name: 'Kong',
+      icon: 'https://imgs.search.brave.com/xqbyLKQqi8lmwf10Zjz_vIDFAZo1ExofeBJzbR6a1xw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sYXll/cjUuaW8vc3RhdGlj/LzQyNTUwOTgyZjBm/MDYyYjNlMTkwMjBi/ZmFmOTM4MDkwL2tv/bmctY29sb3Iuc3Zn',
+      type: skillCategories.TOOL,
     }
   ]
 
