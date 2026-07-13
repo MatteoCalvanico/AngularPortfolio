@@ -1,5 +1,8 @@
-<div class="skills-container">
-    <div class="skill" *ngFor="let skill of skills">
-      <img [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+<swiper-container #skillsSwiper init="false" class="skills-swiper" aria-label="Continuously scrolling skills">
+  <swiper-slide *ngFor="let skill of skills">
+    <div class="skill">
+      <img [src]="skill.icon" [alt]="''" loading="lazy">
+      <span>{{ skill.name }}</span>
     </div>
-  </div>
+  </swiper-slide>
+</swiper-container>

@@ -1,31 +1,77 @@
 <main>
-    <header>
-        <app-bash></app-bash>
-    </header>
-    <section class="app-section">
-        <app-personal-info></app-personal-info>
-    </section>
-    <h1>Projects</h1>
-    <section class="carousel">
-        <button id="prevButton" class="carousel-button prev" (click)="prevProject()" [disabled]="!canGoPrev()" [class.disabled]="!canGoPrev()">&#10094;</button>
-        <div class="carousel-inner">
-            <app-project *ngFor="let project of visibleProjects" [project]="project"></app-project>
-        </div>
-        <button id="nextButton" class="carousel-button next" (click)="nextProject()" [disabled]="!canGoNext()" [class.disabled]="!canGoNext()">&#10095;</button>
-    </section>
-    <h1>Skills</h1>
-    <section>
-        <app-skill></app-skill>
-    </section>
-    <h1>Experience and education</h1>
-    <section>
-        <app-experience *ngFor="let exp of eduExperiences" [exp]="exp"></app-experience>
-        <span class="divider"></span>
-        <app-experience *ngFor="let exp of workExperiences" [exp]="exp"></app-experience>
-    </section>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="#top">MC<span>.</span></a>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contacts">Contact</a>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <p class="eyebrow">Matteo Calvanico · Full-Stack Software Engineer</p>
+    <app-bash></app-bash>
+    <app-personal-info></app-personal-info>
+  </header>
+
+  <section id="projects" class="page-section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">01 / Selected work</p>
+        <h1>Projects</h1>
+      </div>
+    </div>
+    <div class="carousel" aria-label="Project carousel">
+      <button
+        class="carousel-button project-prev"
+        type="button"
+        aria-label="Previous project"
+      >
+        ←
+      </button>
+      <swiper-container #projectsSwiper init="false" class="projects-swiper" aria-label="Project carousel">
+        <swiper-slide *ngFor="let project of projects">
+          <app-project [project]="project"></app-project>
+        </swiper-slide>
+      </swiper-container>
+      <button
+        class="carousel-button project-next"
+        type="button"
+        aria-label="Next project"
+      >
+        →
+      </button>
+    </div>
+  </section>
+
+  <section id="skills" class="page-section">
+    <div class="section-heading compact">
+      <div>
+        <p class="eyebrow">02 / Toolkit</p>
+        <h1>Skills</h1>
+      </div>
+    </div>
+    <app-skill></app-skill>
+  </section>
+
+  <section id="experience" class="page-section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">03 / Background</p>
+        <h1>Experience and education</h1>
+      </div>
+    </div>
+    <div class="experience-list">
+      <app-experience *ngFor="let exp of experiences" [exp]="exp"></app-experience>
+    </div>
+  </section>
+
+  <section id="contacts" class="page-section contact-section">
+    <p class="eyebrow">04 / Get in touch</p>
     <h1>You want more?...</h1>
-    <h2>...then check out my contacts OR download my CV</h2>
-    <section>
-        <app-contacts></app-contacts>
-    </section>
+    <p class="contact-copy">
+      ...then check out my contacts OR download my CV
+    </p>
+    <app-contacts></app-contacts>
+  </section>
 </main>

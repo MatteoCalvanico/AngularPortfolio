@@ -1,28 +1,21 @@
-<section class="component-section">
-    <h3>{{ project.name }}</h3>
-    <img class="project-preview" [src]="project.image" alt="{{ project.name }}">
+<article class="project-card">
+  @if (project.githubUrl) {
+    <a class="card-link" [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Open ' + project.name + ' source code'"></a>
+  }
+  <div class="preview-wrap">
+    <img class="project-preview" [src]="project.image" [alt]="project.name + ' preview'" loading="lazy">
+  </div>
+  <div class="project-content">
+    <div class="project-title">
+      <h2>{{ project.name }}</h2>
+      @if (project.githubUrl) { <span aria-hidden="true">↗</span> }
+    </div>
     <p class="project-desc">{{ project.description }}</p>
-    @if (project.githubUrl != '') {
-        <a [href]="project.githubUrl" target="_blank">
-            <img src="https://imgs.search.brave.com/w5LFW4ei3PC6DUOkw2jcpG1OVDzoYhDqENlECFBWUg8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8y/LzI0L0dpdGh1Yl9s/b2dvX3N2Zy5zdmc" alt="GitHub" class="github-icon">
-        </a>
-    }@else {
-        <p class="no-github">Source code is private</p>
-    }
-    <p class="p-tech">Technologies used:</p>
-    <ul>
-        <li *ngFor="let tech of project.technologies">
-            <ng-container *ngIf="tech">
-                <img *ngIf="tech.icon" [src]="tech.icon" alt="{{ tech.name }}" class="tech-icon">
-                <span class="tech-name">{{ tech.name }}</span>
-            </ng-container>
-        </li>
+    <div class="project-links">
+      <a *ngFor="let link of project.otherUrls" [href]="link.url" target="_blank" rel="noopener noreferrer">{{ link.title }} ↗</a>
+    </div>
+    <ul class="technologies" aria-label="Technologies used">
+      <li *ngFor="let tech of project.technologies">{{ tech.name }}</li>
     </ul>
-    <section *ngIf="project.otherUrls" class="final-links">
-        <ul>
-            <li *ngFor="let link of project.otherUrls">
-                <a [href]="link.url" target="_blank">{{link.title}}</a>
-            </li>
-        </ul>
-    </section>
-</section>
+  </div>
+</article>
