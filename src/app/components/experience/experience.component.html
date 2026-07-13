@@ -1,29 +1,17 @@
-<div class="experience-card">
-    <section>
-        <div class="header">
-            <div class="title-company">
-                <h3>{{exp.title}}</h3>
-                <h5>at: {{exp.company}}</h5>
-                <h6>{{exp.location}}</h6>
-            </div>
-            <div class="dates">
-                <p>{{exp.startDate}} - {{exp.endDate}}</p>
-            </div>
-        </div>
-        <div class="image">
-            <a [href]="exp.website" target="_blank">
-                <img [src]="exp.image" alt="{{exp.company}}">
-            </a>
-        </div>
-        <div class="description">
-            <p>{{exp.description}}</p>
-        </div>
-        <h5>What I learned:</h5>
-        <div class="technologies">
-            <div *ngFor="let tech of exp.technologies" class="tech">
-                <img [src]="tech.icon" alt="{{tech.name}}">
-                <p>{{tech.name}}</p>
-            </div>
-        </div>
-    </section>
-</div>
+<article class="experience-card">
+  <a class="card-link" [href]="exp.website" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Visit ' + exp.company"></a>
+  <div class="period">{{ exp.startDate }} — {{ exp.endDate }}</div>
+  <div class="experience-main">
+    <div class="title-row">
+      <div>
+        <h2>{{ exp.title }}</h2>
+        <p>{{ exp.company }} · {{ exp.location }}</p>
+      </div>
+      <span aria-hidden="true">↗</span>
+    </div>
+    <p class="description">{{ exp.description }}</p>
+    <ul class="technologies" aria-label="Skills and technologies">
+      <li *ngFor="let tech of exp.technologies">{{ tech.name }}</li>
+    </ul>
+  </div>
+</article>

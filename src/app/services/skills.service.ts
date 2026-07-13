@@ -3,25 +3,24 @@ import { Skill, skillCategories } from '../interfaces/skill';
 
 /**
  * Service to manage skills data.
- * 
+ *
  * @remarks
  * This service provides methods to retrieve skills data. The skills data is currently hardcoded
  * but can be moved to a JSON file for better maintainability.
- * 
+ *
  * @example
  * ```typescript
  * import { SkillsService } from './skills.service';
- * 
+ *
  * const skillsService = new SkillsService();
  * const allSkills = skillsService.getAllSkills();
  * const kotlinSkill = skillsService.getSkillByName('Kotlin');
  * ```
  */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SkillsService {
-
   //Template:
   /*
     {
@@ -86,7 +85,7 @@ export class SkillsService {
     {
       name: 'DBeaver',
       icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/DBeaver_logo.svg/384px-DBeaver_logo.svg.png',
-      type: 'TOOL'
+      type: 'TOOL',
     },
     {
       name: 'DotNet',
@@ -106,6 +105,11 @@ export class SkillsService {
     {
       name: 'Google Cloud',
       icon: 'https://camo.githubusercontent.com/d124825d0e0968226011ee97e6001d44a4844a75cc2a1a058cde8bf7791bea97/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676f6f676c655f636c6f75642f676f6f676c655f636c6f75642d69636f6e2e737667',
+      type: skillCategories.TOOL,
+    },
+    {
+      name: 'AWS',
+      icon: 'https://images.seeklogo.com/logo-png/31/1/amazon-web-services-aws-logo-png_seeklogo-319188.png',
       type: skillCategories.TOOL,
     },
     {
@@ -242,14 +246,14 @@ export class SkillsService {
       name: 'Kong',
       icon: 'https://imgs.search.brave.com/xqbyLKQqi8lmwf10Zjz_vIDFAZo1ExofeBJzbR6a1xw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sYXll/cjUuaW8vc3RhdGlj/LzQyNTUwOTgyZjBm/MDYyYjNlMTkwMjBi/ZmFmOTM4MDkwL2tv/bmctY29sb3Iuc3Zn',
       type: skillCategories.TOOL,
-    }
-  ]
+    },
+  ];
 
   /**
    * Retrieves all skills.
-   * 
+   *
    * @returns An array of all skills.
-   * 
+   *
    * @example
    * ```typescript
    * const allSkills = skillsService.getAllSkills();
@@ -261,17 +265,17 @@ export class SkillsService {
 
   /**
    * Retrieves a skill by its name.
-   * 
+   *
    * @param name - The name of the skill to retrieve.
    * @returns The skill object if found, otherwise `undefined`.
-   * 
+   *
    * @example
    * ```typescript
    * const kotlinSkill = skillsService.getSkillByName('Kotlin');
    * ```
    */
   getSkillByName(name: string): Skill | null {
-    return this.allSkills.find(skill => skill.name === name) || null;
+    return this.allSkills.find((skill) => skill.name === name) || null;
   }
 
   /**
@@ -281,6 +285,8 @@ export class SkillsService {
    * @returns An array of Skill objects that do not include the excluded skill names.
    */
   getAllSkillsExcept(excludedSkills: string[]): Skill[] {
-    return this.allSkills.filter(skill => !excludedSkills.includes(skill.name));
+    return this.allSkills.filter(
+      (skill) => !excludedSkills.includes(skill.name),
+    );
   }
 }

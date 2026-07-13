@@ -7,6 +7,11 @@ import { Skill } from "./skill";
  */
 export interface Experience {
   /**
+   * Display priority. Higher values appear first.
+   */
+  order: number;
+
+  /**
    * The title of the position held.
    */
   title: string;
