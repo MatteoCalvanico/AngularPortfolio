@@ -18,7 +18,6 @@ export class SkillComponent implements OnInit, AfterViewInit {
   @ViewChild('skillsSwiper') private skillsSwiper!: ElementRef<SwiperElement>;
 
   skills: Skill[] = [];
-
   constructor(private skillsService: SkillsService) {}
 
   ngOnInit(): void {
