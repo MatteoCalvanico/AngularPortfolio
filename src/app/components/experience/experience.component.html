@@ -1,6 +1,20 @@
 <article class="experience-card">
-  <a class="card-link" [href]="exp.website" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Visit ' + exp.company"></a>
-  <div class="period">{{ exp.startDate }} — {{ exp.endDate }}</div>
+  <a
+    class="card-link"
+    [href]="exp.website"
+    target="_blank"
+    rel="noopener noreferrer"
+    [attr.aria-label]="'Visit ' + exp.company"
+  ></a>
+  <div class="period">
+    <span>{{ exp.startDate }} — {{ exp.endDate }}</span>
+    <img
+      class="company-logo"
+      [src]="exp.image"
+      [alt]="exp.company + ' logo'"
+      loading="lazy"
+    />
+  </div>
   <div class="experience-main">
     <div class="title-row">
       <div>

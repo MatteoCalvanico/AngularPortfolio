@@ -22,6 +22,10 @@
 }
 
 .period {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
   padding-top: 0.2rem;
   color: var(--accent);
   font-family: var(--mono);
@@ -48,10 +52,17 @@
     font-size: 0.85rem;
   }
 
-  span {
-    color: var(--accent);
-    font-size: 1.15rem;
-  }
+}
+
+.company-logo {
+  width: 500px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.title-row > span {
+  color: var(--accent);
+  font-size: 1.15rem;
 }
 
 .description {
