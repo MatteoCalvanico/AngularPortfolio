@@ -25,6 +25,20 @@ export class ExperiencesService {
 
   allEduExperiences: Experience[] = [
     {
+      order: 5,
+      title: "Master's Degree in Computer Science — A: Software Techniques",
+      company: 'University of Bologna',
+      location: 'Bologna, Italy',
+      startDate: 'October 2026',
+      endDate: 'Present',
+      description:
+        'I am pursuing a Master’s Degree in Computer Science, following the A: TECNICHE DEL SOFTWARE curriculum. My studies include software architecture, quantum computing, databases and artificial intelligence, deep learning, multimedia data management, computer graphics, and XR and gaming.',
+      technologies: [],
+      image:
+        'https://www.unibo.it/it/immagini/1_UNIBO_Ateneo_vert_pos.jpg/@@images/cc65c983-07a0-4359-add5-69104bcde471.png',
+      website: 'https://corsi.unibo.it/2cycle/ComputerScience',
+    },
+    {
       order: 4,
       title: "Bachelor's Degree in Computed System Technologies",
       company: 'University of Bologna',
@@ -74,6 +88,24 @@ export class ExperiencesService {
   ];
 
   allWorkExperiences: Experience[] = [
+    {
+      order: 6,
+      title: 'Software Engineer',
+      company: 'DMA',
+      location: 'Cesena, Italy',
+      startDate: 'January 2026',
+      endDate: 'Present',
+      description:
+        'Full-stack development across AWS-based backend projects and single-page applications built with Next.js and React, as well as projects using HubSpot CMS.',
+      technologies: [
+        this.skillService.getSkillByName('AWS')!,
+        this.skillService.getSkillByName('React')!,
+        this.skillService.getSkillByName('TypeScript')!,
+        this.skillService.getSkillByName('Node.js')!,
+      ],
+      image: 'https://www.dma.it/hubfs/Sito%20DMA/DMA_Logo.svg',
+      website: 'https://www.dma.it/',
+    },
     {
       order: 2,
       title: 'Internship',
