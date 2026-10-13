@@ -26,7 +26,7 @@ export class ExperiencesService {
   allEduExperiences: Experience[] = [
     {
       order: 5,
-      title: "Master's Degree in Computer Science — A: Software Techniques",
+      title: "Master's Degree in Computer Science",
       company: 'University of Bologna',
       location: 'Bologna, Italy',
       startDate: 'October 2026',
